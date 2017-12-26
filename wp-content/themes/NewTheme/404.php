@@ -1,1 +1,4 @@
-<h1>not found page inside web. MAGIC - NG</h1>
+<?php get_header(); ?>
+<h2>Error 404 - Not Found</h2>
+<?php get_sidebar(); ?>
+<?php get_footer(); ?>

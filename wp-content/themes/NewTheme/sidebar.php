@@ -1,7 +1,7 @@
-<section id="sidebar">
+<section id="sidebar" class="sidebar">
+	
+	<h2>Aquí va el sidebar.</h2>
+	
 
-	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Main Sidebar') ) : ?>
-	<?php endif; ?>
-
-
+	<h4>fin de sidebar</h4>
 </section>
