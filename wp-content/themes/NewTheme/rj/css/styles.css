@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee|Cookie|Sacramento|Tangerine');
+body {
+  background-color: skyblue;
+  color: white;
+}
+@media screen and (min-width: 1200px) {
+  
+}
+@media screen and (max-width: 1200px) {
+  body {
+    background-color: silver;
+  }
+}
+@media screen and (max-width: 991px) {
+  body {
+    background-color: #ffc0cb;
+  }
+}
+@media screen and (max-width: 767px) {
+  body {
+    bakcground-color: #000000;
+    color: black;
+  }
+}
+@media screen and (max-width: 640px) {
+  body {
+    background-color: silver;
+  }
+}
+@media screen and (max-width: 480px) {
+  body {
+    background-color: black;
+    color: white;
+  }
+}
+@media screen and (max-width: 320px) {
+  body {
+    background-color: green;
+    color: black;
+  }
+}
+.articulo {
+  -webkit-box-shadow: 10px 10px 10px #87ceeb;
+  -moz-box-shadow: 10px 10px 10px #87ceeb;
+  -ms-box-shadow: 10px 10px 10px #87ceeb;
+  -o-box-shadow: 10px 10px 10px #87ceeb;
+  box-shadow: 10px 10px 10px #87ceeb;
+  background-color: transparent;
+}
+
+/* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */

@@ -1,0 +1,39 @@
+//import first documentrs
+@import "default/variables.less";//DONE
+@import "default/fonts-styles.less";//DONE
+@import "default/start-styles.less";// @revisar su uso.
+@import "default/general.less";// @DONE 
+
+// utilización de los imports.
+//imoprts media-min/max-1200.less  estilos por defecto.
+//imports subcarpeta "modificar" añadir nuevos estilos.
+@media screen and (min-width: 1200px){ 
+@import "default/min-width-1200.less";//@estilos por defecto. 
+
+}   
+@media screen and (max-width: 1200px){ 
+@import "default/max-width-1200.less"; 
+
+}
+@media screen and (max-width: 991px){ 
+@import "default/max-width-991.less"; 
+
+}
+@media screen and (max-width: 767px){ 
+@import "default/max-width-767.less"; 
+
+}
+@media screen and (max-width: 640px){ 
+@import "default/max-width-640.less"; 
+
+}
+@media screen and (max-width: 480px){ 
+@import "default/max-width-480.less"; 
+
+}
+@media screen and (max-width: 320px){ 
+@import "default/max-width-320.less"; 
+
+}
+@import "default/final-sytles.less";//estilo nuevos 
+ 

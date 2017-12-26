@@ -1,0 +1,1 @@
+<h1>not found page inside web. MAGIC - NG</h1>

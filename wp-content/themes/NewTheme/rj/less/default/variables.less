@@ -1,0 +1,66 @@
+//Variables principales
+@basefont:Arial;
+@basecolor: black;
+@basefontcolor:white;
+@secondfont: Tangerine; 
+
+//mixins 
+
+// uso para sombra
+
+//@shejex = eje Y sombre
+//@shejey = eje X sombra
+//@shdegradado = difuminado de la sombra.
+//@shcolor = color sombra
+
+.sombra(@shejex: 5px, @shejey: 10px, @shdegradado: 10px, @shcolor: green){
+	-webkit-box-shadow:@shejex @shejey  @shdegradado @shcolor;
+	-moz-box-shadow:@shejex @shejey  @shdegradado @shcolor;
+	-ms-box-shadow:@shejex @shejey  @shdegradado @shcolor;
+	-o-box-shadow:@shejex @shejey  @shdegradado @shcolor;
+	box-shadow:@shejex @shejey  @shdegradado @shcolor;
+
+}
+
+.rounde (@x: 5px, @y: 20px) {
+  -webkit-border-radius: @x @y;
+  -moz-border-radius: @x @y;
+  -ms-border-radius: @x @y;
+  -o-border-radius: @x @y;
+  border-radius: @x @y;
+}
+  
+
+
+// condiciones
+
+//para que funcione correctamente -
+//debe haber un funciones con el codigo, en este caso, 
+// "si" y otra para "no".
+
+@estado: si ;
+
+//Funcion en caso "si"
+.my-optional-style() when (@estado = si)  {
+  body {
+    background-color:black;
+    color: white;
+  }
+
+
+}
+
+//funcion en caso "no"
+.my-optional-style() when (@estado = no)  {
+  button {
+    color: black;
+    background-color:white;
+  }
+
+
+}
+
+
+
+
+ 
