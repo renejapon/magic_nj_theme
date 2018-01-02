@@ -8,6 +8,7 @@ function themerj_styles(){
 	wp_enqueue_style('bootstrap', "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css");
 
 	wp_enqueue_script('jquery');
+    wp_enqueue_script('jqueryy', "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js", array('jqery'), '3.2.1', true);
 	wp_enqueue_script('bootstrapjs', "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", array('jqery'), '3.3.7', true);
 
  	wp_enqueue_style('style', get_stylesheet_uri() );
@@ -42,3 +43,6 @@ function theme_custom_logo() {
 }
 add_action( 'after_setup_theme', 'theme_custom_logo' );
 
+
+
+  
