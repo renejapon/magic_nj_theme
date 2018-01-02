@@ -15,9 +15,25 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 
 
-header {
+/*
+===========
+GENERAL STYLES THEME
+===========
+*/
+div.cont_withou_p, section.content_site{
+	
+	padding-right:0;
+	padding-left:0;
+}
+.borde{
 	border:2px solid black;
 }
-header div, div.container-fluid div, div.container-fluid{
-	border:2px solid gold ;
+
+article img{
+	border:0.5px solid gold;
+	width:100%;
+}
+article{
+	max-height:400px;
+	overflow:hidden;
 }

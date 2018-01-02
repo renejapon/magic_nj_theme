@@ -57,16 +57,18 @@
           </button>
           <a class="navbar-brand" href="#">WebSiteName</a>
         </div>
+        <div class="collapse navbar-collapse block_menu_main" id="myNavbar" aria-expanded="false">
           <?php 
             wp_nav_menu( 
               array(
                 'theme_location'    => 'menu_principal', 
-                'container_class'   => 'collapse navbar-collapse',
-                'container_id'      => 'myNavbar',
-                'menu_class'        => 'nav navbar-nav',
+                'container'         => '',
+                'container_id'      => '',
+                'menu_class'        => 'nav navbar-nav navbar-reverse',
 
             )); 
           ?>
+        </div>
       </div>
     </nav>
   </header>

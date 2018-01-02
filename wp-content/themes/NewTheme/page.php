@@ -7,6 +7,7 @@
 			endwhile;
 
 		?>
+		hola desde page.php
 	</div>
 </section>
 
