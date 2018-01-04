@@ -4,9 +4,20 @@
 //id categories
 
 $sec_1_cat_id = 3;
+$sec1_post = 3;
 $sec_2_cat_id = 5;
+$sec2_post = 2;
 $sec_3_cat_id = 6;
+$sec3_post = 3;
 
+/*
+
+$mypost = new WP_Query($args);
+while($mypost->have_posts() ):
+$mypost->the_post();
+*/
+
+//plugin para asignar numero de articulos y numero de categoria.
 ?>
 	<div class="container-fluid content_main cont_withou_p">
 		<section class="block_publi_left col-xs-2 col-lg-2 col-md-2">
@@ -20,61 +31,41 @@ $sec_3_cat_id = 6;
 						<?php echo category_description( $sec_1_cat_id ); ?> 
 					</article>
 					<?php
-						$args = array(
-							'posts_per_page'   => 3
-
-						); 
-						$query = new WP_Query($args); 
-					?>
-					<?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
-					<article class="col-xs-4 post_entradas">
-					<!-- Display the Title as a link to the Post's permalink. -->
-						<?php the_post_thumbnail('entradas', array('class' => 'img-responsive')); ?>
-						<div class="cont_arti">
-							<h3><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-							<div class="parraf"> <?php the_content(); ?> </div>
-							<small class="date_article"><?php the_time( 'F jS, Y' ); ?> by <?php the_author_posts_link(); ?>	</small>
-							<p class="postmetadata"><?php esc_html_e( 'Posted in' ); ?> <?php the_category( ', ' ); ?></p>
-						</div>
-					</article> <!-- closes the first div box -->
-
-					<?php endwhile; wp_reset_postdata();
-					else : ?>
-						<p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
-					<?php endif; ?>
-					<div>
-						Categories list : 
-						<?php  $categorias = get_categories(); ?>
-						<?php foreach($categorias as $categoria): ?>
-						<?php echo '<br>'.$categoria->name.'<br>'; ?>
-						<?php echo get_category_link($categoria->cat_ID).'<br>'; ?>
-						<?php echo $caregoria->description.'<br>'; ?>
-					<?php endforeach; ?>
-					</div>
+					$mypost = new WP_Query('cat='.$sec_1_cat_id.'&posts_per_page='.$sec1_post);
+					while($mypost->have_posts() ): $mypost->the_post(); ?>
+					<article class="col-4 col-xs-4 col-lg-4">
+						<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(array('class' => 'imag-responsive')); ?></a>
+						<h3><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+						<div class="parraf"> <?php the_excerpt(); ?> </div>
+						<p><?php the_time(get_option('date_format')); ?></p>
+					</article>
+					<?php 
+					//endforeach; 
+					endwhile;
+					wp_reset_postdata(); ?>
 				</section>
 				<section class="row section_conciertos">
 					<article class="descrip_category col-12 col-xs-12 col-lg-12">
 						<h2><?php echo get_cat_name($sec_2_cat_id);?></h2>
 						<?php echo category_description( $sec_2_cat_id ); ?> 
 					</article>
-					<article class="col-xs-6 col-lg-6 col-6 text-center">
-						<h3>Titulo</h3>
-						<img src="" alt="imagen fondo" class="img-responsive">
-						<div class="contenthide">
-							<h3>titulo hover</h3>
-							<a href="">Leer más</a>
+					<?php
+					$mypost = new WP_Query('cat='.$sec_2_cat_id.'&posts_per_page='.$sec2_post);
+					while($mypost->have_posts() ): $mypost->the_post(); ?>
+					<article class="col-6 col-xs-6 col-lg-6">
+						<?php the_post_thumbnail(array('class' => 'imag-responsive second_class_img')); ?>
+						<div class="cont_hidden">
+							<h3><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 						</div>
-						<span>fecha: 27/07/2017</span>
+						<div class="cont_display">
+							<p><?php the_excerpt(); ?></p>
+							<p><?php the_time(get_option('date_format')); ?></p>
+						</div>
 					</article>
-					<article class="col-xs-6 col-lg-6 col-6 text-center ">
-						<h3>Titulo</h3>
-						<img src="" alt="imagen fondo" class="img-responsive">
-						<div class="contenthide">
-							<h3>titulo hover</h3>
-							<a href="">Leer más</a>
-						</div>
-						<span>fecha: 27/07/2017</span>
-					</article> 
+					<?php 
+					//endforeach; 
+					endwhile;
+					wp_reset_postdata(); ?>
 				 
 				</section>
 				<section class="row section_proximos_eventos">
@@ -103,7 +94,6 @@ $sec_3_cat_id = 6;
 						</div>
 						<img src="" alt="imagen article" class="img-responsive">
 					</article>
-				 
 				</section>
 			</div>
 			<?php get_sidebar(); ?>

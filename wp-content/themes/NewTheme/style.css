@@ -37,3 +37,8 @@ article{
 	max-height:400px;
 	overflow:hidden;
 }
+
+.sub_block_logo_site a img{
+	width:150px !important;
+	height:150px;
+}
