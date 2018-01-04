@@ -1,30 +1,27 @@
-<?php get_header(); ?>
 <?php 
+	get_header(); 
+	//Numero de articulos y categorias
+	$sec_1_cat_id = 3; 	//category ID
+	$sec1_post = 3; 	//N entradas
+	$sec_2_cat_id = 5;
+	$sec2_post = 2;
+	$sec_3_cat_id = 6;
+	$sec3_post = 3;
 
-//id categories
+	/*
+	IDEAS 
 
-$sec_1_cat_id = 3;
-$sec1_post = 3;
-$sec_2_cat_id = 5;
-$sec2_post = 2;
-$sec_3_cat_id = 6;
-$sec3_post = 3;
+	$mypost = new WP_Query($args);
+	while($mypost->have_posts() ):
+	$mypost->the_post(); 
+	---> codig para mostrar la seccion de todas las entradas de la web. 
 
-/*
+	---> CREAR PLUGIN para asignar numero de articulos y numero de categoria para cada seccion de page-front.php.
 
-$mypost = new WP_Query($args);
-while($mypost->have_posts() ):
-$mypost->the_post();
-*/
-
-//plugin para asignar numero de articulos y numero de categoria.
+	*/
 ?>
-	<div class="container-fluid content_main cont_withou_p">
-		<section class="block_publi_left col-xs-2 col-lg-2 col-md-2">
-			<h3>Aqui va publicidad (left Banners )</h3>
-		</section><!-- end block_publi_left-->
-		<section class="content_site col-xs-8 col-lg-8">
-			<div class="container-fluid  col-xs-9 col-lg-9">
+		
+			<div class="container-fluid  col-xs-12 col-sm-12 col-md-9 col-lg-9">
 				<section class="row section_musica">
 					<article class="descrip_category">
 						<h2><?php echo get_cat_name($sec_1_cat_id);?></h2>
@@ -33,7 +30,7 @@ $mypost->the_post();
 					<?php
 					$mypost = new WP_Query('cat='.$sec_1_cat_id.'&posts_per_page='.$sec1_post);
 					while($mypost->have_posts() ): $mypost->the_post(); ?>
-					<article class="col-4 col-xs-4 col-lg-4">
+					<article class="col-12 col-xs-6 col-lg-4">
 						<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(array('class' => 'imag-responsive')); ?></a>
 						<h3><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 						<div class="parraf"> <?php the_excerpt(); ?> </div>
@@ -96,10 +93,5 @@ $mypost->the_post();
 					</article>
 				</section>
 			</div>
-			<?php get_sidebar(); ?>
-		</section>
-		<section class="block_publi_right col-xs-2 col-lg-2">
-			<h3>Aqui va publicidad (right Banners )</h3>
-		</section> <!-- end container_publi_right-->
-	</div> <!-- end container -->
+
 <?php get_footer(); ?>

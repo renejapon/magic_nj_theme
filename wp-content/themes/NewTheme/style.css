@@ -20,11 +20,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 GENERAL STYLES THEME
 ===========
 */
-div.cont_withou_p, section.content_site{
-	
-	padding-right:0;
-	padding-left:0;
-}
+
 .borde{
 	border:2px solid black;
 }
@@ -41,4 +37,9 @@ article{
 .sub_block_logo_site a img{
 	width:150px !important;
 	height:150px;
+}
+
+
+aside{
+	border:2px solid black;
 }

@@ -3,6 +3,13 @@ body {
   background-color: skyblue;
   color: white;
 }
+div.cont_withou_p,
+section.content_site,
+section.block_publi_left,
+section.block_publi_right {
+  padding-right: 0;
+  padding-left: 0;
+}
 @media screen and (min-width: 1200px) {
   
 }
@@ -10,16 +17,34 @@ body {
   body {
     background-color: silver;
   }
+  .content_main .block_publi_left,
+  .content_main .block_publi_right {
+    display: none;
+  }
+  div.cont_withou_p,
+  section.content_site,
+  section.block_publi_left,
+  section.block_publi_right {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
 }
 @media screen and (max-width: 991px) {
   body {
     background-color: #ffc0cb;
   }
+  .content_main .block_publi_left,
+  .content_main .block_publi_right {
+    display: none;
+  }
 }
 @media screen and (max-width: 767px) {
   body {
-    bakcground-color: #000000;
     color: black;
+  }
+  .content_main .block_publi_left,
+  .content_main .block_publi_right {
+    display: none;
   }
 }
 @media screen and (max-width: 640px) {

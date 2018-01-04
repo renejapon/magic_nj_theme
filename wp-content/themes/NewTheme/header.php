@@ -37,7 +37,6 @@
                 'link_after'        => '</span>',
                 'fallback_cb'       => '',
                 'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>'
-
             )); 
           ?> 
         </div><!-- end sub_block_right_up -->
@@ -55,8 +54,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>                        
           </button>
-          <a class="navbar-brand" href="#">WebSiteName</a>
-        </div>
+        </div>  <!-- end mobile buttom -->
         <div class="collapse navbar-collapse block_menu_main" id="myNavbar" aria-expanded="false">
           <?php 
             wp_nav_menu( 
@@ -73,3 +71,8 @@
     </nav>
   </header>
 <div class="clearfix"></div>
+  <div class="container-fluid content_main cont_withou_p">
+    <section class="block_publi_left col-xs-2 col-lg-2 col-md-2">
+      <h3>BANNERS LEFT</h3>
+    </section><!-- end block_publi_left-->
+    <section class="content_site col-xs-12 col-ms-12 col-lg-8">
