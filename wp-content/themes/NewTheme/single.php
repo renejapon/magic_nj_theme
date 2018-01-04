@@ -11,6 +11,8 @@
 					<div class="parraf"> <?php the_content(); ?> </div>
 					<p><?php the_time(get_option('date_format')); //opcional ?></p>
 				</article>
+				<h3>paisana</h3>
 			</section>
 		</div>
+
 <?php 	get_footer(); ?>
