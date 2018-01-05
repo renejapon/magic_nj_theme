@@ -10,7 +10,7 @@
   <?php wp_head(); ?>
 </head>
 <body <?php  body_class(); ?> >
-  <header class="col-12 col-xs-12 col-lg-12">
+  <header id="block_header" class="col-lg-8">
     <div class="block_header_one col-12 col-xs-12 col-lg-12">
       <div class="sub_block_logo_site col-2 col-xs-2 col-lg-2">
         <?php 
