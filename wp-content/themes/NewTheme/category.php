@@ -11,6 +11,7 @@
 		$img_an = 600;
 		$img_al = 600;
 		echo wp_get_attachment_image( 55,array($img_an,$img_al) ); 
+
 		?>
 	</article>
 </div>

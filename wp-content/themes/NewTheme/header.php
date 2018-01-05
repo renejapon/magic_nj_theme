@@ -10,7 +10,7 @@
   <?php wp_head(); ?>
 </head>
 <body <?php  body_class(); ?> >
-  <header id="block_header" class="col-lg-8">
+  <header id="block_header" class="col-lg-9">
     <div class="block_header_one col-12 col-xs-12 col-lg-12">
       <div class="sub_block_logo_site col-2 col-xs-2 col-lg-2">
         <?php 
@@ -71,23 +71,23 @@
     </nav>
   </header>
 <div class="clearfix"></div>
-  <?php if(is_front_page() ): ?>
+
+  <?php if(is_front_page() ): //mostrará los articulos solo en el front page?>
     <section class="row block_slider_portada col-lg-12">
       <?php $slider_p1= 5;  ?>
       <?php $mypost = new WP_Query('cat='.$slider_p1.'&posts_per_page=1'); while($mypost->have_posts() ): $mypost->the_post(); ?>
         <article class="block_arti_p1 col-lg-6">
           <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(array('class' => 'img-responsive')); ?></a>
           <h3><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-          <div class="parraf"><?php the_excerpt(); ?></div>
+          <div class="arraf"><?php the_excerpt(); ?></div>
           <p><?php the_time(get_option('date_format')); ?></p>
         </article>
       <?php endwhile; wp_reset_postdata(); ?>
-      <?php $slider_p2= 3;  ?>
+      <?php $slider_p2= 6;  ?>
       <?php $mypost = new WP_Query('cat='.$slider_p2.'&posts_per_page=1'); while($mypost->have_posts() ): $mypost->the_post(); ?>
         <article class="block_arti_p1 col-lg-3">
           <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(array('class' => 'img-responsive')); ?></a>
           <h3><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-          <div class="parraf"><?php the_excerpt(); ?></div>
           <p><?php the_time(get_option('date_format')); ?></p>
         </article>
       <?php endwhile; wp_reset_postdata(); ?>
@@ -97,7 +97,6 @@
         <article class="block_p3_">
           <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(array('class' => 'img-responsive')); ?></a>
           <h3><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-          <div class="parraf"><?php the_excerpt(); ?></div>
           <p><?php the_time(get_option('date_format')); ?></p>
         </article>
       <?php endwhile; wp_reset_postdata(); ?>

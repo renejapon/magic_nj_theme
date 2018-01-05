@@ -48,6 +48,8 @@ header#block_header{
 section.block_slider_portada{
 	border:1px solid black;
 	height:100%;
+	padding-left:15px;
+	padding-right:15px;
 }
 section.block_slider_portada article{
 	height:100%;
