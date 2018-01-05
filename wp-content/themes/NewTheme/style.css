@@ -20,16 +20,18 @@ GENERAL STYLES THEME
 ===========
 */
 
-.borde{
-	border:2px solid black;
+.borde, section.block_slider_portada article, section.block_slider_portada article div article {
+	border:1px solid black;
+	height: 100%;
+
 }
 
-article img{
-	border:0.5px solid gold;
-	width:100%;
-}
-article{
-	
+
+section.block_slider_portada,div.block_double, section.block_slider_portada article, section.block_slider_portada article div article, section.block_slider_portada article div {
+	padding-left:0;
+	padding-right:0;
+	margin:0;
+	height: 100%;
 }
 
 .sub_block_logo_site a img{
@@ -39,5 +41,14 @@ article{
 
 header#block_header{
 	float:none;
-	margin:0 auto !important;
+	margin:0 auto;
+}
+
+
+section.block_slider_portada{
+	border:1px solid black;
+	height:100%;
+}
+section.block_slider_portada article{
+	height:100%;
 }

@@ -71,6 +71,41 @@
     </nav>
   </header>
 <div class="clearfix"></div>
+  <?php if(is_front_page() ): ?>
+    <section class="row block_slider_portada col-lg-12">
+      <?php $slider_p1= 5;  ?>
+      <?php $mypost = new WP_Query('cat='.$slider_p1.'&posts_per_page=1'); while($mypost->have_posts() ): $mypost->the_post(); ?>
+        <article class="block_arti_p1 col-lg-6">
+          <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(array('class' => 'img-responsive')); ?></a>
+          <h3><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+          <div class="parraf"><?php the_excerpt(); ?></div>
+          <p><?php the_time(get_option('date_format')); ?></p>
+        </article>
+      <?php endwhile; wp_reset_postdata(); ?>
+      <?php $slider_p2= 3;  ?>
+      <?php $mypost = new WP_Query('cat='.$slider_p2.'&posts_per_page=1'); while($mypost->have_posts() ): $mypost->the_post(); ?>
+        <article class="block_arti_p1 col-lg-3">
+          <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(array('class' => 'img-responsive')); ?></a>
+          <h3><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+          <div class="parraf"><?php the_excerpt(); ?></div>
+          <p><?php the_time(get_option('date_format')); ?></p>
+        </article>
+      <?php endwhile; wp_reset_postdata(); ?>
+      <div class="block_double col-lg-3">
+        <?php $slider_p2= 3;  ?>
+      <?php $mypost = new WP_Query('cat='.$slider_p2.'&posts_per_page=2'); while($mypost->have_posts() ): $mypost->the_post(); ?>
+        <article class="block_p3_">
+          <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(array('class' => 'img-responsive')); ?></a>
+          <h3><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+          <div class="parraf"><?php the_excerpt(); ?></div>
+          <p><?php the_time(get_option('date_format')); ?></p>
+        </article>
+      <?php endwhile; wp_reset_postdata(); ?>
+      </div>
+
+
+    </section>
+<?php endif; ?>
   <div class="container-fluid content_main cont_withou_p">
     <section class="block_publi_left col-xs-2 col-lg-2 col-md-2">
       <h3>BANNERS LEFT</h3>
