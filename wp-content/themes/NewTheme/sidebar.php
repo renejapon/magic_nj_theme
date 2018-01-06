@@ -1,3 +1,14 @@
+<?php 
+/**
+*
+* The template for sidebar
+*
+* @package MagicNg
+* @subpackage MagicNg
+* @since MagicNg 1.0
+*/
+?>
+
 <aside id="sidebar" class="sidebar col-xs-12 col-sm-12 col-md-3 col-lg-3">	
 	<section class="row block_new_post">
 		<h2><?php 	get_categories('name'); ?></h2>

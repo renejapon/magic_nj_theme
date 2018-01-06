@@ -1,4 +1,12 @@
-<?php get_header(); ?>
+<?php 
+/**
+* The template for categories
+*
+* @package MagicNg
+* @subpackage MagicNg
+* @since MagicNg 1.0
+**/
+get_header(); ?>
 
 
 <div class="container-fluid  col-xs-12 col-sm-12 col-md-9 col-lg-9">

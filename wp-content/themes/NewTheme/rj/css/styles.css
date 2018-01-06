@@ -10,8 +10,11 @@ section.block_publi_right {
   padding-right: 0;
   padding-left: 0;
 }
+article.history_magic_ng img.magic_image_about {
+  width: 100%;
+}
 @media screen and (min-width: 1200px) {
-  
+  /*añadir estilos nuevos */
 }
 @media screen and (max-width: 1200px) {
   body {
@@ -28,6 +31,7 @@ section.block_publi_right {
     padding-right: 15px;
     padding-left: 15px;
   }
+  /*añadir estilos nuevos */
 }
 @media screen and (max-width: 991px) {
   body {
@@ -37,6 +41,7 @@ section.block_publi_right {
   .content_main .block_publi_right {
     display: none;
   }
+  /*añadir estilos nuevos */
 }
 @media screen and (max-width: 767px) {
   body {
@@ -46,31 +51,27 @@ section.block_publi_right {
   .content_main .block_publi_right {
     display: none;
   }
+  /*añadir estilos nuevos */
 }
 @media screen and (max-width: 640px) {
   body {
     background-color: silver;
   }
+  /*añadir estilos nuevos */
 }
 @media screen and (max-width: 480px) {
   body {
     background-color: black;
     color: white;
   }
+  /*añadir estilos nuevos */
 }
 @media screen and (max-width: 320px) {
   body {
     background-color: green;
     color: black;
   }
-}
-.articulo {
-  -webkit-box-shadow: 10px 10px 10px #87ceeb;
-  -moz-box-shadow: 10px 10px 10px #87ceeb;
-  -ms-box-shadow: 10px 10px 10px #87ceeb;
-  -o-box-shadow: 10px 10px 10px #87ceeb;
-  box-shadow: 10px 10px 10px #87ceeb;
-  background-color: transparent;
+  /*añadir estilos nuevos */
 }
 
 /* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */

@@ -19,6 +19,15 @@
 	---> CREAR PLUGIN para asignar numero de articulos y numero de categoria para cada seccion de page-front.php.
 
 	*/
+
+/*
+ *
+ * The template for front page
+ *
+ * @package MagicNg
+ * @subpackage MagicNg
+ * @since MagicNg 1.0
+ */
 ?>
 		
 			<div class="container-fluid  col-xs-12 col-sm-12 col-md-9 col-lg-9">
