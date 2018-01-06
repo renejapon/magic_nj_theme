@@ -10,4 +10,12 @@
 
  ?>
 
-<h1>Aqui va el buscador </h1>
+<?php get_header(); ?>
+
+<div class="container-fluid  col-xs-12 col-sm-12 col-md-9 col-lg-9">
+	<?php the_title(); ?>
+	resultado busqueda.
+
+</div>
+
+<?php get_footer(); ?>
