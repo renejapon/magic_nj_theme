@@ -54,3 +54,21 @@ section.block_slider_portada{
 section.block_slider_portada article{
 	height:100%;
 }
+
+
+article div h3.text_front{
+	color:purple;
+	font-weight: 900;
+}
+article div h3.text_back {
+	margin-top:-50px;
+	z-index: -1;
+	font-size: 31px;
+	vertical-align: 10px;
+	color: white;
+	font-weight: 900;
+	letter-spacing: 10px;
+	top: -13px;
+	opacity: 0.6;
+	transform: scaleY(1.5);
+}
