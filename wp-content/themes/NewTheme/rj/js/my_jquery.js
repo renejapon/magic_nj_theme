@@ -1,6 +1,6 @@
-jQuery(document).ready(function() {
-	
+jQuery(document).ready(function($) {
 
+$('img').addClass('img-responsive');
 
-	console.log("my_query.js file is ready!!");
+console.log("fak");	
 });

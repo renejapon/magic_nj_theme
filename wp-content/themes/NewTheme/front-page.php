@@ -37,11 +37,10 @@
 							<h3 class="text_front"><?php echo get_cat_name($sec_1_cat_id); ?></h3>
 							<h3 class="text_back"><?php echo get_cat_name($sec_1_cat_id); ?></h3>
 						</div>
-						<?php echo category_description( $sec_1_cat_id ); ?> 
 					</article>
 					<?php $mypost = new WP_Query('cat='.$sec_1_cat_id.'&posts_per_page='.$sec1_post); while($mypost->have_posts() ): $mypost->the_post(); ?>
 					<article class="col-12 col-xs-6 col-lg-4">
-						<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(array('class' => 'img-responsive')); ?></a>
+						<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(array('class' => 'posts_front img-responsive')); ?></a>
 						<h3><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 						<div class="parraf"><?php the_excerpt(); ?></div>
 						<p><?php the_time(get_option('date_format')); ?></p>
@@ -54,7 +53,6 @@
 							<h3 class="text_front"><?php echo get_cat_name($sec_2_cat_id); ?></h3>
 							<h3 class="text_back"><?php echo get_cat_name($sec_2_cat_id); ?></h3>
 						</div>
-						<?php echo category_description( $sec_2_cat_id ); ?> 
 					</article>
 					<?php $mypost = new WP_Query('cat='.$sec_2_cat_id.'&posts_per_page='.$sec2_post); while($mypost->have_posts() ): $mypost->the_post(); ?>
 					<article class="col-6 col-xs-6 col-lg-6">
@@ -76,7 +74,6 @@
 							<h3 class="text_front"><?php echo get_cat_name($sec_3_cat_id); ?></h3>
 							<h3 class="text_back"><?php echo get_cat_name($sec_3_cat_id); ?></h3>
 						</div>
-						<?php echo category_description( $sec_3_cat_id ); ?> 
 					</article>
 						<?php $mypost = new WP_Query('cat='.$sec_3_cat_id.'&posts_per_page='.$sec3_post); while($mypost->have_posts() ): $mypost->the_post(); ?>
 					<article class="col-6 col-xs-6 col-lg-6">

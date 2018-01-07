@@ -56,11 +56,11 @@ section.block_slider_portada article{
 }
 
 
-article div h3.text_front{
+div h3.text_front{
 	color:purple;
 	font-weight: 900;
 }
-article div h3.text_back {
+div h3.text_back {
 	margin-top:-50px;
 	z-index: -1;
 	font-size: 31px;

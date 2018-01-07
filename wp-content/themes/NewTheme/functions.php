@@ -9,7 +9,7 @@ function themerj_styles(){
     
     wp_enqueue_script('jquery');
     wp_enqueue_script('bootstrapjs', get_stylesheet_directory_uri().'/rj/js/bootstrap.min.js');
-    wp_enqueue_script('my_jquery', get_stylesheet_directory_uri().'/rj/js/jquery.js');
+    wp_enqueue_script('my_jquery', get_stylesheet_directory_uri().'/rj/js/my_jquery.js');
 
  	wp_enqueue_style('style', get_stylesheet_uri() );
  	wp_enqueue_style('styles', get_stylesheet_directory_uri().'/rj/css/styles.css');
@@ -57,3 +57,16 @@ add_theme_support('post-thumbnails');
   
 //true corta la imagen y la centra
 add_image_size('entradas',750,490, true);  
+
+
+
+
+//default featur image
+
+function dfi_add_class($html, $post_id, $default_thumbnail_id, $size, $attr) {
+    // add a class to the existing class list
+    $attr['class'] .= ' my-class';
+
+    return wp_get_attachment_image( $default_thumbnail_id, $size, false, $attr );
+}
+add_filter( 'dfi_thumbnail_html', 'dfi_add_class', 10, 5 );
