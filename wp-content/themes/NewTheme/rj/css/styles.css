@@ -1,8 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Bungee|Cookie|Sacramento|Tangerine');
-body {
-  background-color: skyblue;
-  color: white;
-}
 div.cont_withou_p,
 section.content_site,
 section.block_publi_left,
@@ -17,9 +13,6 @@ article.history_magic_ng img.magic_image_about {
   /*añadir estilos nuevos */
 }
 @media screen and (max-width: 1200px) {
-  body {
-    background-color: silver;
-  }
   .content_main .block_publi_left,
   .content_main .block_publi_right {
     display: none;
@@ -34,9 +27,6 @@ article.history_magic_ng img.magic_image_about {
   /*añadir estilos nuevos */
 }
 @media screen and (max-width: 991px) {
-  body {
-    background-color: #ffc0cb;
-  }
   .content_main .block_publi_left,
   .content_main .block_publi_right {
     display: none;
@@ -44,9 +34,6 @@ article.history_magic_ng img.magic_image_about {
   /*añadir estilos nuevos */
 }
 @media screen and (max-width: 767px) {
-  body {
-    color: black;
-  }
   .content_main .block_publi_left,
   .content_main .block_publi_right {
     display: none;
@@ -54,23 +41,12 @@ article.history_magic_ng img.magic_image_about {
   /*añadir estilos nuevos */
 }
 @media screen and (max-width: 640px) {
-  body {
-    background-color: silver;
-  }
   /*añadir estilos nuevos */
 }
 @media screen and (max-width: 480px) {
-  body {
-    background-color: black;
-    color: white;
-  }
   /*añadir estilos nuevos */
 }
 @media screen and (max-width: 320px) {
-  body {
-    background-color: green;
-    color: black;
-  }
   /*añadir estilos nuevos */
 }
 
