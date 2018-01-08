@@ -14,7 +14,10 @@ get_header(); ?>
 				<h3 class="text_front"><?php the_title(); ?></h3>
 				<h3 class="text_back"><?php the_title(); ?></h3>
 			</div>
-			<img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="magic_image_about">
+		<?php while(have_posts() ): the_post(); ?>
+		
+			<?php the_content(); ?>
+		<?php endwhile; ?>
 		</article>
 
 

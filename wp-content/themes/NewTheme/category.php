@@ -12,7 +12,6 @@ get_header(); ?>
 			<h3 class="text_front"><?php single_cat_title(); ?></h3>
 			<h3 class="text_back"><?php single_cat_title(); ?></h3>
 		</div>
-
 	<?php 
 		while(have_posts() ): the_post(); 
 	?>

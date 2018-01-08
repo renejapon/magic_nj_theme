@@ -14,7 +14,9 @@
     <div class="block_header_one col-12 col-xs-12 col-lg-12">
       <div class="sub_block_logo_site col-2 col-xs-2 col-lg-2">
         <?php 
-        if ( function_exists( 'the_custom_logo' ) ) { the_custom_logo(); }else{ ?>
+        if ( function_exists( 'the_custom_logo' ) ){ 
+          the_custom_logo(); 
+        }else{ ?>
             <h1><a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a></h1>
         <?php } ?>
       </div><!-- end sub_block_logo_site -->
@@ -25,6 +27,7 @@
             <h3>reproductor de musica </h3>
           </div><!-- end block_music-->
           <?php 
+          if( has_nav_menu('redes_sociales') ){
             wp_nav_menu( array(
                 'theme_location'    => 'redes_sociales', 
                 'container'         => 'div',
@@ -38,6 +41,7 @@
                 'fallback_cb'       => '',
                 'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>'
             )); 
+          }
           ?> 
         </div><!-- end sub_block_right_up -->
         <div class="sub_block_right_down col-12 col-xs-12 col-lg-12">
@@ -57,6 +61,7 @@
         </div>  <!-- end mobile buttom -->
         <div class="collapse navbar-collapse block_menu_main" id="myNavbar" aria-expanded="false">
           <?php 
+          if(has_nav_menu('menu_principal')){
             wp_nav_menu( 
               array(
                 'theme_location'    => 'menu_principal', 
@@ -65,6 +70,9 @@
                 'menu_class'        => 'nav navbar-nav navbar-reverse',
 
             )); 
+          }else{
+            echo 'Nav menu not created or asigned..';
+          }
           ?>
         </div>
       </div>
@@ -78,9 +86,11 @@
       <?php $mypost = new WP_Query('cat='.$slider_p1.'&posts_per_page=1'); while($mypost->have_posts() ): $mypost->the_post(); ?>
         <article class="block_arti_p1 col-lg-6">
           <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(array('class' => 'img-responsive')); ?></a>
-          <h3><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-          <div class="arraf"><?php the_excerpt(); ?></div>
-          <p><?php the_time(get_option('date_format')); ?></p>
+          <div class="arraf">
+            <h3><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+            <?php the_excerpt(); ?>
+            <p><?php the_time(get_option('date_format')); ?></p>
+          </div>
         </article>
       <?php endwhile; wp_reset_postdata(); ?>
       <?php $slider_p2= 6;  ?>

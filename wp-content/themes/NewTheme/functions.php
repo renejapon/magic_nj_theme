@@ -1,6 +1,6 @@
 <?php
-
-
+// habilitado para traducciones.
+load_theme_textdomain( 'magic_nj' );
 //hoja de estilos
 function themerj_styles(){
  	wp_enqueue_style('normalize', get_stylesheet_directory_uri().'/rj/css/normalize.css');
@@ -38,6 +38,10 @@ function nav_item_menu_main ($atts,$item,$args ) {
 
 add_theme_support( 'custom-logo' );
 
+add_image_size( 'magic_nj-featured-image', 2000, 1200, true );
+
+add_image_size( 'magic_nj-thumbnail-avatar', 100, 100, true );
+
 //logo support theme
 function theme_custom_logo() {
     $defaults = array(
@@ -70,3 +74,79 @@ function dfi_add_class($html, $post_id, $default_thumbnail_id, $size, $attr) {
     return wp_get_attachment_image( $default_thumbnail_id, $size, false, $attr );
 }
 add_filter( 'dfi_thumbnail_html', 'dfi_add_class', 10, 5 );
+
+
+
+
+/**
+ * Register widget area.
+ *
+ * @since Twenty Fifteen 1.0
+ *
+ * @link https://codex.wordpress.org/Function_Reference/register_sidebar
+ */
+function magic_nj_widgets_init() {
+    register_sidebar( array(
+        'name'          => __( 'SIDEBAR', 'magic_nj' ),
+        'id'            => 'sidebar',
+
+        'description'   => __( 'Add widgets here to appear in your sidebar on blog posts and archive pages.', 'magic_nj' ),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ) );
+
+    register_sidebar( array(
+        'name'          => __( 'Footer 1', 'magic_nj' ),
+        'id'            => 'sidebar-2',
+        'description'   => __( 'Add widgets here to appear in your footer.', 'magic_nj' ),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ) );
+
+    register_sidebar( array(
+        'name'          => __( 'Footer 2', 'magic_nj' ),
+        'id'            => 'sidebar-3',
+        'description'   => __( 'Add widgets here to appear in your footer.', 'magic_nj' ),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ) );
+
+    register_sidebar( array(
+        'name'          => __( 'Footer 3', 'magic_nj' ),
+        'id'            => 'sidebar-4',
+        'description'   => __( 'Add widgets here to appear in your footer.', 'magic_nj' ),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ) );
+}
+add_action( 'widgets_init', 'magic_nj_widgets_init' );
+
+
+
+    /*
+     * Enable support for Post Formats.
+     *
+     * See: https://codex.wordpress.org/Post_Formats
+     */
+    add_theme_support( 'post-formats', array(
+        'aside',
+        'image',
+        'video',
+        'quote',
+        'link',
+        'gallery',
+        'audio',
+    ) );
+
+
+    // Add theme support for selective refresh for widgets.
+    add_theme_support( 'customize-selective-refresh-widgets' );
+
