@@ -15,10 +15,12 @@
 		if ( have_posts() ) : ?>
 			<?php
 			/* Start the Loop */
-			while ( have_posts() ) : the_post();
-				the_title('<h3 class="">','</h3>');
-				the_content() ;
-			endwhile;
+			while ( have_posts() ) : the_post();?>
+				<article>
+					<h3 class="text_front"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+					<p><?php the_content() ; ?></p>
+				</article>
+			<?php endwhile;
 		endif; ?>
 
 </div><!-- .wrap -->

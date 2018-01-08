@@ -19,6 +19,15 @@ Use it to make something cool, have fun, and share what you've learned with othe
 GENERAL STYLES THEME
 ===========
 */
+
+
+
+.content_main {
+	border:1px solid black;
+}
+.block_content{
+	border:1px solid black;	
+}
 .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6,
 .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, 
 .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, 
@@ -48,6 +57,12 @@ section.block_slider_portada,div.block_double, section.block_slider_portada arti
 header#block_header{
 	float:none;
 	margin:0 auto;
+	padding-left:0;
+	padding-right:0;
+
+}
+header .navbar{
+	margin-bottom: 0;
 }
 
 
@@ -75,7 +90,7 @@ div h3.text_back {
 	z-index: -1;
 	font-size: 31px;
 	vertical-align: 10px;
-	color: white;
+	color: grey;
 	font-weight: 900;
 	letter-spacing: 10px;
 	top: -13px;
