@@ -14,7 +14,7 @@ function themerj_styles(){
  	wp_enqueue_style('style', get_stylesheet_uri() );
  	wp_enqueue_style('styles', get_stylesheet_directory_uri().'/rj/css/styles.css');
 
-}
+} 
 //para que funcione la funcion them_styles();
 add_action('wp_enqueue_scripts', 'themerj_styles');
 
