@@ -108,6 +108,12 @@ div h3.text_back {
 	margin-bottom: 10px;
 }
 
-aside, footer, section.block_slider_portada, .block_content,.content_main, .sub_block_right_down{
+aside, footer, section.block_slider_portada, .block_content,.content_main, .sub_block_right_down,.block_content_main_left{
 	border: 1px solid black;
+}
+
+img{
+	display: block;
+	max-width: 100%;	
+	height: auto;;
 }
