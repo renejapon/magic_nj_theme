@@ -25,16 +25,13 @@ article.history_magic_ng img.magic_image_about {
   /*añadir estilos nuevos */
 }
 @media screen and (max-width: 1200px) {
+  .content_main {
+    padding-left: 0;
+    padding-right: 0;
+  }
   .content_main .block_publi_left,
   .content_main .block_publi_right {
     display: none;
-  }
-  div.cont_withou_p,
-  section.content_site,
-  section.block_publi_left,
-  section.block_publi_right {
-    padding-right: 15px;
-    padding-left: 15px;
   }
   /*añadir estilos nuevos */
 }
