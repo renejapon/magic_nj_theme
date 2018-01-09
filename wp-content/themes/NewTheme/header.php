@@ -16,7 +16,7 @@
   <div class="container-fluid content_main cont_withou_p col-lg-8">
     <header id="block_header" class="col-lg-12">
       <div class="block_header_one col-12 col-xs-12 col-lg-12">
-        <div class="sub_block_logo_site col-2 col-xs-2 col-lg-2">
+        <div class="sub_block_logo_site col-lg-2">
           <?php 
           if ( function_exists( 'the_custom_logo' ) ){ 
             the_custom_logo(); 
@@ -24,10 +24,9 @@
               <h1><a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a></h1>
           <?php } ?>
         </div><!-- end sub_block_logo_site -->
-        <div class="sub_block_right col-9 col-xs-9 col-lg-9">
+        <div class="sub_block_right col-lg-10">
           <div class="sub_block_right_up col-12 col-xs-12 col-lg-12">
-            <!-- reproducto + redes sociales-->
-            <div class="block_music col-8 col-xs-8 col-lg-8">
+            <div class="block_music col-8 col-xs-8 col-lg-8"><!-- reproducto + redes sociales-->
               <h3>reproductor de musica </h3>
             </div><!-- end block_music-->
             <?php 
@@ -48,7 +47,7 @@
             }
             ?> 
           </div><!-- end sub_block_right_up -->
-          <div class="sub_block_right_down col-12 col-xs-12 col-lg-12">
+          <div class="sub_block_right_down  col-12 col-xs-12 col-lg-12">
             <!-- banner principal -->
             <h3>BANNER CABECERA </h3>
           </div><!-- end sub_block_right_down -->

@@ -1,9 +1,8 @@
 			<?php get_sidebar(); ?>
 		</section><!--fin contenido principal-->
-		<footer class="footer">
-			<div class="container-fluid">
+		<footer>
 				<p>D-RJ&copy; <?php bloginfo('name'); ?>, <?=date('Y');?>. </p>
-			</div>
+
 		</footer>
 	</div> <!-- end container -->
 	<section class="block_publi_right col-xs-2 col-lg-2 text-center"><!--Inicio banner publi right-->
