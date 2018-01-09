@@ -9,6 +9,18 @@ section.block_publi_right {
 article.history_magic_ng img.magic_image_about {
   width: 100%;
 }
+.sub_block_right_up .menu_social_links li.fa-facebook-square {
+  font-size: 35px;
+  color: blue;
+}
+.sub_block_right_up .menu_social_links li.fa-instagram {
+  font-size: 35px;
+  color: skyblue;
+}
+.sub_block_right_up .menu_social_links li.fa-youtube-square {
+  font-size: 35px;
+  color: red;
+}
 @media screen and (min-width: 1200px) {
   /*añadir estilos nuevos */
 }
@@ -27,17 +39,13 @@ article.history_magic_ng img.magic_image_about {
   /*añadir estilos nuevos */
 }
 @media screen and (max-width: 991px) {
-  .content_main .block_publi_left,
-  .content_main .block_publi_right {
+  .block_publi_left,
+  .block_publi_right {
     display: none;
   }
   /*añadir estilos nuevos */
 }
 @media screen and (max-width: 767px) {
-  .content_main .block_publi_left,
-  .content_main .block_publi_right {
-    display: none;
-  }
   /*añadir estilos nuevos */
 }
 @media screen and (max-width: 640px) {

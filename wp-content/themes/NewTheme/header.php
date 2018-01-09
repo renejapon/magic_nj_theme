@@ -19,7 +19,7 @@
         <div class="sub_block_logo_site col-lg-2">
           <?php 
           if ( function_exists( 'the_custom_logo' ) ){ 
-            the_custom_logo(); 
+          the_custom_logo(); 
           }else{ ?>
               <h1><a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a></h1>
           <?php } ?>
@@ -39,7 +39,7 @@
                   'menu_class'        => 'menu_items',
                   'menu_id'           => 'menu_items_links',
                   'depth'             => 1,
-                  'link_before'       => '<span class="s-only">',
+                  'link_before'       => '<span class="sr-only">',
                   'link_after'        => '</span>',
                   'fallback_cb'       => '',
                   'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>'
