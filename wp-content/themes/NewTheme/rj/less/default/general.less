@@ -13,28 +13,20 @@ article.history_magic_ng img.magic_image_about{
 }
 
 //ESTRUCTURA DE CLASES DE LA WEB.
-
 .block_header{ //contenido para el header
-
-
 	.block_header_one{ //BLOCQUE SUPERIOR HEADER
-
 		.sub_block_logo_site{ //BLOQUE LOGO DEL SITIO.
-
 			h1{//TITULO DE LA WEB bloginfo('name')
 
 
 			}
-
 		}
 		.sub_block_right{ //CONTENIDO REPRODUCTO, REDES Y BANNER
-			
 			.sub_block_right_down{ // CONTENIDO BANNER HEADER
 
 
 			}
 		}
-
 	}
 	nav.block_menu_main{//MENU PRINCIPAL
 
@@ -42,44 +34,39 @@ article.history_magic_ng img.magic_image_about{
 	}
 }
 
-.sub_block_right_up{
-	//bloque reproductor
-	.block_music{
-
-	}
 
 	//menu redes sociales
-	.menu_social_links {
-		li.fa-facebook-square{
-			font-size:35px;
-			color:blue;
-		
-		}
-		li.fa-instagram{
-			font-size:35px;
-			color:skyblue;
-		
-		}
+	#menu_items_links {
+		li{
+			position: relative;
+			display: inline-block;
+		} 
+		li a:before{
+			display: inline-block;
+			vertical-align: top;
+			padding: 0 5px;
+			font-size:40px;
+			font-family:'fontAwesome';
+			color:black;
+			content: '\f08e';
+			border:2px solid gold;
 
-		li.fa-youtube-square{
-			font-size:35px;
-			color:red;
-		
 		}
+		li a[href*="facebook.com"]:before{content: '\f082';}
+		li a[href*="youtube.com"]:before{content: '\f081';}
+		li a[href*="twitter.com"]:before{content: '\f099';}
+		li a[href*="instagram.com"]:before{content: '\f16d';}
+		li a[href*="web.whatsapp.com"]:before{content: '\f232';}
+		
 
 	}
-}
 
 
-
-
-
-
+ 
 
 section.content_site .block_slider_portada{//contenido general para todas las paginas
 
 	.block_slider_portada{ //CONTENIDO PORTADA BANNER
-
 		.block_arti_big{//POST BIG
 
 
@@ -98,9 +85,7 @@ section.content_site .block_slider_portada{//contenido general para todas las pa
 
 
 			}
-
 		}
-
 	}
 	
 	.block_content_main_left{//CONTENIDO ARTICULOS
@@ -112,8 +97,6 @@ section.content_site .block_slider_portada{//contenido general para todas las pa
 				.text_front{// TEXTO DELANTE
 
 				}
-
-
 		}	
 
 
@@ -135,17 +118,13 @@ section.content_site .block_slider_portada{//contenido general para todas las pa
 
 
 			}
-
 			article.cm_art_01{// ARTICLE 2
 
 
 			}
-	
-
 		}
 
 		.next_events_secction{// SECCION PROXIMOS EVENTOS.
-
 			.nxevs_art_0{// ARTICLE ONE
 
 
@@ -155,23 +134,45 @@ section.content_site .block_slider_portada{//contenido general para todas las pa
 
 
 			}
-
-
 			.nxevs_art_02{// ARTICLE THREE
 
 			}
-
 			.nxevs_art_03{ //ARTICLE FOUR 
 
 
 			}
+		}
+	}
+}
 
+
+// ESTRUCTURA DE CLASES PARA FOOTER - MAXIMO 3 CLASES ENCAJADAS.
+
+footer{
+	
+	#footer_content,#footer_banner{
+		border:1px solid gold;
+		
+	}
+	#footer_banner{
+	
+	}
+	#footer_content{
+		min-height:200px;
+		height: 100%;
+		.box_foo_1,.box_foo_2,.box_foo_3{
 
 		}
 
-
+		.box_foo_1{
+			color:grey;
+		}
+		.box_foo_2{
+			color:red;
+		}
+		.box_foo_3{
+			color:gold;
+		}
 	}
-
-
 
 }

@@ -34,7 +34,7 @@
               wp_nav_menu( array(
                   'theme_location'    => 'redes_sociales', 
                   'container'         => 'div',
-                  'container_class'   => 'menu_social_links col-4 col-xs-4 col-lg-4',
+                  'container_class'   => 'menu_social_links ',
                   'container_id'      => 'block_social_links',
                   'menu_class'        => 'menu_items',
                   'menu_id'           => 'menu_items_links',

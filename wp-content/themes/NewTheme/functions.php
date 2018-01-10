@@ -99,7 +99,7 @@ function magic_nj_widgets_init() {
 
     register_sidebar( array(
         'name'          => __( 'Footer 1', 'magic_nj' ),
-        'id'            => 'sidebar-2',
+        'id'            => 'footer_widgets_one',
         'description'   => __( 'Add widgets here to appear in your footer.', 'magic_nj' ),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget'  => '</section>',

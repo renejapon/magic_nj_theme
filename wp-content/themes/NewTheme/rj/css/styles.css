@@ -9,17 +9,51 @@ section.block_publi_right {
 article.history_magic_ng img.magic_image_about {
   width: 100%;
 }
-.sub_block_right_up .menu_social_links li.fa-facebook-square {
-  font-size: 35px;
-  color: blue;
+#menu_items_links li {
+  position: relative;
+  display: inline-block;
 }
-.sub_block_right_up .menu_social_links li.fa-instagram {
-  font-size: 35px;
-  color: skyblue;
+#menu_items_links li a:before {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 5px;
+  font-size: 40px;
+  font-family: 'fontAwesome';
+  color: black;
+  content: '\f08e';
+  border: 2px solid gold;
 }
-.sub_block_right_up .menu_social_links li.fa-youtube-square {
-  font-size: 35px;
+#menu_items_links li a[href*="facebook.com"]:before {
+  content: '\f082';
+}
+#menu_items_links li a[href*="youtube.com"]:before {
+  content: '\f081';
+}
+#menu_items_links li a[href*="twitter.com"]:before {
+  content: '\f099';
+}
+#menu_items_links li a[href*="instagram.com"]:before {
+  content: '\f16d';
+}
+#menu_items_links li a[href*="web.whatsapp.com"]:before {
+  content: '\f232';
+}
+footer #footer_content,
+footer #footer_banner {
+  border: 1px solid gold;
+}
+footer #footer_content {
+  min-height: 200px;
+  height: 100%;
+}
+footer #footer_content .box_foo_1 {
+  color: grey;
+}
+footer #footer_content .box_foo_2 {
   color: red;
+}
+footer #footer_content .box_foo_3 {
+  color: gold;
 }
 @media screen and (min-width: 1200px) {
   /*añadir estilos nuevos */
