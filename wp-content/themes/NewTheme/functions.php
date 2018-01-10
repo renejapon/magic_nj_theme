@@ -93,7 +93,7 @@ function magic_nj_widgets_init() {
         'description'   => __( 'Add widgets here to appear in your sidebar on blog posts and archive pages.', 'magic_nj' ),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget'  => '</section>',
-        'before_title'  => '<h2 class="widget-title">',
+        'before_title'  => '<h2 class="widget_title_sidebar">',
         'after_title'   => '</h2>',
     ) );
 
@@ -103,7 +103,7 @@ function magic_nj_widgets_init() {
         'description'   => __( 'Add widgets here to appear in your footer.', 'magic_nj' ),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget'  => '</section>',
-        'before_title'  => '<h2 class="widget-title">',
+        'before_title'  => '<h2 class="widget_title_footer_one">',
         'after_title'   => '</h2>',
     ) );
 
@@ -113,7 +113,7 @@ function magic_nj_widgets_init() {
         'description'   => __( 'Add widgets here to appear in your footer.', 'magic_nj' ),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget'  => '</section>',
-        'before_title'  => '<h2 class="widget-title">',
+        'before_title'  => '<h2 class="widget_title_footer_two">',
         'after_title'   => '</h2>',
     ) );
 
@@ -123,7 +123,7 @@ function magic_nj_widgets_init() {
         'description'   => __( 'Add widgets here to appear in your footer.', 'magic_nj' ),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget'  => '</section>',
-        'before_title'  => '<h2 class="widget-title">',
+        'before_title'  => '<h2 class="widget_title_three">',
         'after_title'   => '</h2>',
     ) );
 }

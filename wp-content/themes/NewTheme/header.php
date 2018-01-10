@@ -30,7 +30,7 @@
               <h3>reproductor de musica </h3>
             </div><!-- end block_music-->
             <?php 
-            if( has_nav_menu('redes_sociales') ){
+            if( has_nav_menu('redes_sociales') ):
               wp_nav_menu( array(
                   'theme_location'    => 'redes_sociales', 
                   'container'         => 'div',
@@ -44,8 +44,9 @@
                   'fallback_cb'       => '',
                   'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>'
               )); 
-            }
-            ?> 
+            else:?>
+              <h3>Add menu social links</h3>
+            <?php endif; ?>
           </div><!-- end sub_block_right_up -->
           <div class="sub_block_right_down  col-12 col-xs-12 col-lg-12">
             <!-- banner principal -->

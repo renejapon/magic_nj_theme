@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Bungee|Cookie|Sacramento|Tangerine');
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
 div.cont_withou_p,
 section.content_site,
 section.block_publi_left,
@@ -9,11 +15,17 @@ section.block_publi_right {
 article.history_magic_ng img.magic_image_about {
   width: 100%;
 }
-#menu_items_links li {
+#menu_items_links,
+.nav_social_links {
+  padding-left: 0;
+}
+#menu_items_links li,
+.nav_social_links li {
   position: relative;
   display: inline-block;
 }
-#menu_items_links li a:before {
+#menu_items_links li a:before,
+.nav_social_links li a:before {
   display: inline-block;
   vertical-align: top;
   padding: 0 5px;
@@ -23,19 +35,24 @@ article.history_magic_ng img.magic_image_about {
   content: '\f08e';
   border: 2px solid gold;
 }
-#menu_items_links li a[href*="facebook.com"]:before {
-  content: '\f082';
+#menu_items_links li a[href*="facebook.com"]:before,
+.nav_social_links li a[href*="facebook.com"]:before {
+  content: 'facebook';
 }
-#menu_items_links li a[href*="youtube.com"]:before {
+#menu_items_links li a[href*="youtube.com"]:before,
+.nav_social_links li a[href*="youtube.com"]:before {
   content: '\f081';
 }
-#menu_items_links li a[href*="twitter.com"]:before {
+#menu_items_links li a[href*="twitter.com"]:before,
+.nav_social_links li a[href*="twitter.com"]:before {
   content: '\f099';
 }
-#menu_items_links li a[href*="instagram.com"]:before {
+#menu_items_links li a[href*="instagram.com"]:before,
+.nav_social_links li a[href*="instagram.com"]:before {
   content: '\f16d';
 }
-#menu_items_links li a[href*="web.whatsapp.com"]:before {
+#menu_items_links li a[href*="web.whatsapp.com"]:before,
+.nav_social_links li a[href*="web.whatsapp.com"]:before {
   content: '\f232';
 }
 footer #footer_content,
