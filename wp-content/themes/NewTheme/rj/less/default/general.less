@@ -1,19 +1,34 @@
 //first content #cont_all_site
+
+
+
 #cont_all_site{
 	.flexdisplay(flex);
-	.flexdir(row);
-	width: 100%;
+	.flexdir(row); 
+	width: @wd_total;
 	overflow:hidden;
 	justify-content: space-around;
 	flex-wrap: nowrap;
 	justify-content: space-around;
 	align-items: stretch;
 	align-content: stretch;
-	
+	//.fondoGradient();
+
+	.block_publi_left, .block_publi_right{
+		border:1px solid black;
+		width:@wd_total_publi;
+	}
+	.block_publi_left{
+		background-color:silver;
+		color:white;
+	}
+	.block_publi_right{
+		background-color:grey; 
+		color:white;
+
+	}
 }
-.block_publi_left, .block_publi_right{
-	border:1px solid black;
-}
+
  
  
 ul{list-style:none;}
@@ -39,9 +54,9 @@ div h3.text_back {
 
 
 
-//ESTRUCTURA DE CLASES DE LA WEB.
-header.block_header{ //contenido para el header
-
+//ESTRUCTURA HEADER
+header#block_header{ //contenido para el header
+	width:100%;
 	.block_header_one{ //BLOCQUE SUPERIOR HEADER
 		.sub_block_logo_site{ //BLOQUE LOGO DEL SITIO.
 			h1{//TITULO DE LA WEB bloginfo('name')
@@ -56,22 +71,24 @@ header.block_header{ //contenido para el header
 			}
 		}
 	}
-	nav{//MENU CONTAINER
+	nav.block_nav_menu{//MENU CONTAINER
 		
 		.mov_btn_menu{// MENU MOVIL-
 
 		}
-		ul{// menu items
-			
-			li{
+		div.block_menu_main{
+			ul{// menu items
+				
+				li{
 
-				a{
-					color:purple;
+					a{
+						color:purple;
+					}
 				}
+
+
+				
 			}
-
-
-			
 		}
 
 
@@ -111,88 +128,7 @@ header.block_header{ //contenido para el header
 
 
  
-
-section.content_site .block_slider_portada{//contenido general para todas las paginas
-
-	.block_slider_portada{ //CONTENIDO PORTADA BANNER
-		.block_arti_big{//POST BIG
-
-
-		}
-		.block_arti_medium{//POST MEDIUM
-
-
-		}
-
-		div.block_article_double{//ARTICULOS DOUBLE
-			div article.double_sub_art_0{ //UP ARTICLE
-
-
-			}
-			div article.double_sub_art_01{ //DOWN ARTICLE
-
-
-			}
-		}
-	}
-	
-	.block_content_main_left{//CONTENIDO ARTICULOS
-		.descrip_category{ // CONTENIDO TITLE CATEGORIA
-				.text_front{// TEXTO DETRAS
-
-
-				}
-				.text_front{// TEXTO DELANTE
-
-				}
-		}	
-
-
-		.music_section{// SECCION MUSICA
-
-			.sm_art_0{// ARTICULO 1
-
-			}
-			.sm_art_01{// ARTICULO 2
-
-			}
-			.sm_art_02{// ARTICULO 3
-
-			}
-
-		}
-		.concierto_section{// SECCION CONCIERTOS
-			article.cm_art_0{// ARTICLE 1
-
-
-			}
-			article.cm_art_01{// ARTICLE 2
-
-
-			}
-		}
-
-		.next_events_secction{// SECCION PROXIMOS EVENTOS.
-			.nxevs_art_0{// ARTICLE ONE
-
-
-			}
-
-			.nxevs_art_01{// ARTICLE TWO
-
-
-			}
-			.nxevs_art_02{// ARTICLE THREE
-
-			}
-			.nxevs_art_03{ //ARTICLE FOUR 
-
-
-			}
-		}
-	}
-}
-
+ 
 
 // ESTRUCTURA DE CLASES PARA FOOTER - MAXIMO 3 CLASES ENCAJADAS.
 

@@ -10,8 +10,8 @@
 
 get_header(); ?>
 
-			<section class="row section_musica">
-				<article class="">
+			<section class=" section_musica">
+				<article>
 					<a href="<?php the_permalink(); ?>">
 						<img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" class="img-responsive image_post_id_<?php echo get_the_ID(); ?>" alt="<?php the_title_attribute(); ?>">
 					</a>

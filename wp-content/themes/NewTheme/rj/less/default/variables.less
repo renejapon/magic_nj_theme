@@ -6,6 +6,14 @@
 
 //mixins 
 
+
+
+//controla el ancho de las columans: publicidad y contenido centro.
+@wd_publi_right:8%;
+@wd_publi_left:8%;
+@wd_total_publi:@wd_publi_right + @wd_publi_left;
+@wd_total: @wd_total_publi - 100% ;
+
 // uso para sombra
 
 //@shejex = eje Y sombre
@@ -46,6 +54,22 @@
   -o-flex-direction:@flex_dir;
   flex-direction:@flex_dir;
 }
+
+
+.fondoGradient() {
+  text-align:center; 
+  background-color: #F4FA58; /*Navegadores que no aceptan el gradiente de fondo*/
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#F4FA58), to(#FF0000)); /* Chrome, Safari versiones más antiguas */
+  background-image: -webkit-linear-gradient(top, #F4FA58, #FF0000); /* Chrome, Safari versiones relativamente modernas */
+  background-image:    -moz-linear-gradient(top, #F4FA58, #FF0000); /* Firefox versiones relativamente modernas*/
+  background-image:      -o-linear-gradient(top, #F4FA58, #FF0000); /* Opera versiones relativamente modernas*/
+  background-image:         linear-gradient(to bottom, #F4FA58, #FF0000); /* Chrome, Firefox, IE, Opera versiones actuales */
+
+}
+
+
+
+
 
 
 

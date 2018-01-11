@@ -54,8 +54,7 @@
           </div><!-- end sub_block_right_down -->
         </div><!-- end sub_block_right-->
       </div><!-- end block_header_one-->
-      <nav class="navbar navbar-inverse ">
-        <div class="container-fluid">
+      <nav class="navbar navbar-inverse block_nav_menu">
           <div class="navbar-header mov_btn_menu">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
               <span class="icon-bar"></span>
@@ -79,7 +78,6 @@
             }
             ?>
           </div>
-        </div>
       </nav>
     </header>
     <section class="content_site "> <!--Inicio contenido principal-->
