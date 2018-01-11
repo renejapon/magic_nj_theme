@@ -1,19 +1,47 @@
 @import url('https://fonts.googleapis.com/css?family=Bungee|Cookie|Sacramento|Tangerine');
+#cont_all_site {
+  -webkit-display: flex;
+  -moz-display: flex;
+  -ms-display: flex;
+  -o-display: flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  overflow: hidden;
+  justify-content: space-around;
+}
+.block_publi_left,
+.block_publi_right {
+  border: 1px solid black;
+}
 ul {
   list-style: none;
 }
 a {
   text-decoration: none;
 }
-div.cont_withou_p,
-section.content_site,
-section.block_publi_left,
-section.block_publi_right {
-  padding-right: 0;
-  padding-left: 0;
+div h3.text_front {
+  color: purple;
+  font-weight: 900;
 }
-article.history_magic_ng img.magic_image_about {
-  width: 100%;
+div h3.text_back {
+  margin-top: -50px;
+  z-index: -1;
+  font-size: 31px;
+  vertical-align: 10px;
+  color: grey;
+  font-weight: 900;
+  letter-spacing: 10px;
+  top: -13px;
+  opacity: 0.6;
+  transform: scaley(1.5);
+}
+header.block_header nav ul li a {
+  color: purple;
 }
 #menu_items_links,
 .nav_social_links {
@@ -37,7 +65,7 @@ article.history_magic_ng img.magic_image_about {
 }
 #menu_items_links li a[href*="facebook.com"]:before,
 .nav_social_links li a[href*="facebook.com"]:before {
-  content: 'facebook';
+  content: '\f082';
 }
 #menu_items_links li a[href*="youtube.com"]:before,
 .nav_social_links li a[href*="youtube.com"]:before {

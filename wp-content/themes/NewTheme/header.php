@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> >
 <head>
   <meta charset="<?php bloginfo( 'charset' ); ?> ">
   <title><?php wp_title(); ?> </title>
   <meta name="viewport" content="width=device-width, minimum-scale=1">
-  <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri();?>/favicon.ico" />
   <link rel="stylesheet" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
   <?php wp_head(); ?>
 </head>
 <body <?php  body_class(); ?> >
-  <section class="block_publi_left col-xs-2 col-lg-2 col-md-2 text-center"><!--Inicio banner publi left-->
+<div id="cont_all_site">
+  <section class="block_publi_left  text-center"><!--Inicio banner publi left-->
     <h3>BANNERS LEFT</h3>
   </section><!-- end block_publi_left-->
-  <div class="container-fluid content_main cont_withou_p col-lg-8">
-    <header id="block_header" class="col-lg-12">
-      <div class="block_header_one col-12 col-xs-12 col-lg-12">
-        <div class="sub_block_logo_site col-lg-2">
+  <div class="content_main ">
+    <header id="block_header">
+      <div class="block_header_one">
+        <div class="sub_block_logo_site ">
           <?php 
           if ( function_exists( 'the_custom_logo' ) ){ 
           the_custom_logo(); 
@@ -24,9 +24,9 @@
               <h1><a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a></h1>
           <?php } ?>
         </div><!-- end sub_block_logo_site -->
-        <div class="sub_block_right col-lg-10">
-          <div class="sub_block_right_up col-12 col-xs-12 col-lg-12">
-            <div class="block_music col-8 col-xs-8 col-lg-8"><!-- reproducto + redes sociales-->
+        <div class="sub_block_right ">
+          <div class="sub_block_right_up ">
+            <div class="block_music "><!-- reproducto + redes sociales-->
               <h3>reproductor de musica </h3>
             </div><!-- end block_music-->
             <?php 
@@ -48,15 +48,15 @@
               <h3>Add menu social links</h3>
             <?php endif; ?>
           </div><!-- end sub_block_right_up -->
-          <div class="sub_block_right_down  col-12 col-xs-12 col-lg-12">
+          <div class="sub_block_right_down  ">
             <!-- banner principal -->
             <h3>BANNER CABECERA </h3>
           </div><!-- end sub_block_right_down -->
         </div><!-- end sub_block_right-->
       </div><!-- end block_header_one-->
-      <nav class="navbar navbar-inverse col-lg-12">
+      <nav class="navbar navbar-inverse ">
         <div class="container-fluid">
-          <div class="navbar-header">
+          <div class="navbar-header mov_btn_menu">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
@@ -71,7 +71,7 @@
                   'theme_location'    => 'menu_principal', 
                   'container'         => '',
                   'container_id'      => '',
-                  'menu_class'        => 'nav navbar-nav navbar-reverse',
+                  'menu_class'        => 'nav navbar-nav navbar-reverse menu_list_header',
 
               )); 
             }else{
@@ -82,4 +82,4 @@
         </div>
       </nav>
     </header>
-    <section class="content_site col-lg-12"> <!--Inicio contenido principal-->
+    <section class="content_site "> <!--Inicio contenido principal-->

@@ -109,7 +109,7 @@ function magic_nj_widgets_init() {
 
     register_sidebar( array(
         'name'          => __( 'Footer 2', 'magic_nj' ),
-        'id'            => 'sidebar-3',
+        'id'            => 'footer_widgets_two',
         'description'   => __( 'Add widgets here to appear in your footer.', 'magic_nj' ),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget'  => '</section>',
@@ -119,7 +119,7 @@ function magic_nj_widgets_init() {
 
     register_sidebar( array(
         'name'          => __( 'Footer 3', 'magic_nj' ),
-        'id'            => 'sidebar-4',
+        'id'            => 'footer_widgets_three',
         'description'   => __( 'Add widgets here to appear in your footer.', 'magic_nj' ),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget'  => '</section>',

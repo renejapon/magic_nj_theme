@@ -7,7 +7,7 @@
 * @since MagicNg 1.0
 **/
 get_header(); ?>
-<div class="container-fluid  col-xs-12 col-sm-12 col-md-9 col-lg-9">
+<div class="container-fluid  ">
 		<div class="title_category">
 			<h3 class="text_front"><?php single_cat_title(); ?></h3>
 			<h3 class="text_back"><?php single_cat_title(); ?></h3>

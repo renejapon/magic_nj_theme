@@ -51,7 +51,7 @@
 			      </div>
 			    </section>
 			<?php endif; ?>
-			<div class="container-fluid  col-xs-12 col-sm-12 col-md-9 col-lg-9 block_content_main_left">
+			<div class="container-fluid block_content_main_left">
 				<section class="row music_section">
 					<article class="descrip_category">
 						<div class="title_category">
@@ -60,7 +60,7 @@
 						</div>
 					</article>
 					<?php $mypost = new WP_Query('cat='.$cat_id_sec1.'&posts_per_page='.$sec1_posts); while($mypost->have_posts() ): $mypost->the_post(); ?>
-					<article class="sm_art_0<?php echo $a; ?>	 col-12 col-xs-6 col-lg-4">
+					<article class="sm_art_0<?php echo $a; ?>">
 						<a href="<?php the_permalink(); ?>"><img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" class="img-responsive image_post_id_<?php echo get_the_ID(); ?>" alt="<?php the_title_attribute(); ?>"></a>
 						<h3><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 						<div class="parraf"><?php the_excerpt(); ?></div>
@@ -69,14 +69,14 @@
 					<?php $a++; endwhile; wp_reset_postdata(); ?>
 				</section>
 				<section class="row concierto_section">
-					<article class="descrip_category col-12 col-xs-12 col-lg-12">
+					<article class="descrip_category ">
 						<div class="title_category">
 							<h3 class="text_front"><?php echo get_cat_name($cat_id_sec2); ?></h3>
 							<h3 class="text_back"><?php echo get_cat_name($cat_id_sec2); ?></h3>
 						</div>
 					</article>
 					<?php $mypost = new WP_Query('cat='.$cat_id_sec2.'&posts_per_page='.$sec2_posts); while($mypost->have_posts() ): $mypost->the_post(); ?>
-					<article class="cm_art_0<?php echo $j; ?> col-6 col-xs-6 col-lg-6">
+					<article class="cm_art_0<?php echo $j; ?> ">
 						<a href="<?php the_permalink(); ?>"><img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" class="img-responsive image_post_id_<?php echo get_the_ID(); ?>" alt="<?php the_title_attribute(); ?>"></a>
 						<div class="cont_hidden">
 							<h3><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
@@ -96,7 +96,7 @@
 						</div>
 					</article>
 					<?php $mypost = new WP_Query('cat='.$cat_id_sec3.'&posts_per_page='.$sec3_posts); while($mypost->have_posts() ): $mypost->the_post(); ?>
-					<article class="sm_art_0<?php echo $q; ?>	 col-12 col-xs-6 col-lg-4">
+					<article class="sm_art_0<?php echo $q; ?>	">
 						<a href="<?php the_permalink(); ?>"><img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" class="img-responsive image_post_id_<?php echo get_the_ID(); ?>" alt="<?php the_title_attribute(); ?>"></a>
 						<h3><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 						<?php the_excerpt(); ?>
@@ -112,7 +112,7 @@
 						</div>
 					</article>
 					<?php $mypost = new WP_Query('cat='.$cat_id_sec4.'&posts_per_page='.$sec4_posts); while($mypost->have_posts() ): $mypost->the_post(); ?>
-					<article class="nxevs_art_0<?php echo $nxevs; ?> col-lg-3">
+					<article class="nxevs_art_0<?php echo $nxevs; ?> ">
 						<a href="<?php the_permalink(); ?>"><img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" class="img-responsive image_post_id_<?php echo get_the_ID(); ?>" alt="<?php the_title_attribute(); ?>"></a>
 						<div class="cont_article">
 							<h3><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>

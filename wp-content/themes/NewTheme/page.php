@@ -7,7 +7,7 @@
 * @since MagicNg 1.0
 **/
 get_header(); ?>
-	<div class="container-fluid content_main col-xs-12 col-sm-12 col-md-9 col-lg-9">
+	<div class="container-fluid content_main ">
 		<article class="history_magic_ng">
 			<div class="title_category">
 				<h3 class="text_front"><?php the_title(); ?></h3>

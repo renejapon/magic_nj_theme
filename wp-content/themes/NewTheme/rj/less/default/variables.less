@@ -29,7 +29,27 @@
   -o-border-radius: @x @y;
   border-radius: @x @y;
 }
-  
+
+.flexdisplay(@flexdis: flex){
+  -webkit-display: @flexdis;
+  -moz-display: @flexdis;
+  -ms-display: @flexdis;
+  -o-display: @flexdis;
+  display: @flexdis;
+}
+
+
+.flexdir(@flex_dir: row){
+  -webkit-flex-direction:@flex_dir;
+  -moz-flex-direction:@flex_dir;
+  -ms-flex-direction:@flex_dir;
+  -o-flex-direction:@flex_dir;
+  flex-direction:@flex_dir;
+}
+
+
+
+
 
 
 // condiciones

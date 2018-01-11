@@ -1,31 +1,45 @@
-//Estilos al comienzo de styles.css
-//estructura col- para bootstrap
-//.col-xs-1, .col-sm-1, .col-md-1, .col-lg-17
+//first content #cont_all_site
+#cont_all_site{
+	.flexdisplay(flex);
+	.flexdir(row);
+	width: 100%;
+	overflow:hidden;
+	justify-content: space-around;
 
 
-//==============================================
-// Normalizar 
+	
+}
+.block_publi_left, .block_publi_right{
+	border:1px solid black;
+}
+ 
+ 
 ul{list-style:none;}
 a{text-decoration: none;}
 
-//==============================================
-
-
-div.cont_withou_p, 
-section.content_site, 
-section.block_publi_left, 
-section.block_publi_right{
-	padding-right:0;
-	padding-left:0;
+//ESTILOS PARA TITULO DOBLE.
+div h3.text_front{
+	color:purple;
+	font-weight: 900;
+}
+div h3.text_back {
+	margin-top:-50px;
+	z-index: -1;
+	font-size: 31px;
+	vertical-align: 10px; 
+	color: grey;
+	font-weight: 900;
+	letter-spacing: 10px;
+	top: -13px;
+	opacity: 0.6;
+	transform: scaleY(1.5);
 }
 
-article.history_magic_ng img.magic_image_about{
-	width:100%;
 
-}
 
 //ESTRUCTURA DE CLASES DE LA WEB.
-.block_header{ //contenido para el header
+header.block_header{ //contenido para el header
+
 	.block_header_one{ //BLOCQUE SUPERIOR HEADER
 		.sub_block_logo_site{ //BLOQUE LOGO DEL SITIO.
 			h1{//TITULO DE LA WEB bloginfo('name')
@@ -40,7 +54,23 @@ article.history_magic_ng img.magic_image_about{
 			}
 		}
 	}
-	nav.block_menu_main{//MENU PRINCIPAL
+	nav{//MENU CONTAINER
+		
+		.mov_btn_menu{// MENU MOVIL-
+
+		}
+		ul{// menu items
+			
+			li{
+
+				a{
+					color:purple;
+				}
+			}
+
+
+			
+		}
 
 
 	}
@@ -66,7 +96,10 @@ article.history_magic_ng img.magic_image_about{
 		content: '\f08e';
 		border:2px solid gold;
 	}
-	li a[href*="facebook.com"]:before{content: 'facebook';}
+
+	//para vender el temas se tiene que dar soporte a todos los iconos 
+	//referencia a tomar es la pagina awesomei con font.
+	li a[href*="facebook.com"]:before{content: '\f082';}
 	li a[href*="youtube.com"]:before{content: '\f081';}
 	li a[href*="twitter.com"]:before{content: '\f099';}
 	li a[href*="instagram.com"]:before{content: '\f16d';}

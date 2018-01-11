@@ -12,7 +12,7 @@
 
 <?php get_header(); ?>
 
-<div class="container-fluid  col-xs-12 col-sm-12 col-md-9 col-lg-9">
+<div class="container-fluid">
 	<?php the_title(); ?>
 	resultado busqueda.
 
