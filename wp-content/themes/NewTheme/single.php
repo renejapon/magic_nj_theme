@@ -9,7 +9,7 @@
 */
 
 get_header(); ?>
-		<div class="container-fluid ">
+
 			<section class="row section_musica">
 				<article class="">
 					<a href="<?php the_permalink(); ?>">
@@ -20,5 +20,4 @@ get_header(); ?>
 					<p><?php the_time(get_option('date_format')); //opcional ?></p>
 				</article>
 			</section>
-		</div>
 <?php 	get_footer(); ?> 
