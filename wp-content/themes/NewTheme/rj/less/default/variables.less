@@ -1,3 +1,10 @@
+// Descripción funciones less.
+// .flexdisplay(flex | inline-flex); 
+// .flexdir(row | row-reverse | column | column-reverse);
+// .shadow(ejeY 'px', ejeX 'x' , enfoque 'px', color);
+
+
+
 //Variables principales
 @basefont:Arial;
 @basecolor: black;
@@ -11,8 +18,9 @@
 //controla el ancho de las columans: publicidad y contenido centro.
 @wd_publi_right:8%;
 @wd_publi_left:8%;
+@wd_total: 100%;
 @wd_total_publi:@wd_publi_right + @wd_publi_left;
-@wd_total: @wd_total_publi - 100% ;
+@wd_content_main: @wd_total_publi - @wd_total;
 
 // uso para sombra
 

@@ -7,7 +7,10 @@
 * @since MagicNg 1.0
 **/
 get_header(); ?>
-	<div class="container-fluid content_main ">
+	<div class="cont_all_pages ">
+
+<h1>PAGINAS.</h1>
+
 		<article class="history_magic_ng">
 			<div class="title_category">
 				<h3 class="text_front"><?php the_title(); ?></h3>
@@ -17,5 +20,19 @@ get_header(); ?>
 			<?php the_content(); ?>
 		<?php endwhile; ?>
 		</article>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
 	</div>
 <?php get_footer(); ?>

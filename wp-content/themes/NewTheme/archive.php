@@ -1,6 +1,8 @@
 <?php get_header(); ?>
+	<div class="cont_allpost_date">
 
-	<div class="container-fluid ">
+
+<h1>archive</h1>
 			<div class="category_title">
 				<?php
 					the_archive_title( '<h3 class="page-title text_front">', '</h1>' );
@@ -17,5 +19,9 @@
 						<p><?php the_content(); ?></p>
 					</article>
 				<?php endwhile; ?>
+	
+
+
+
 	</div><!-- .wrap -->
 <?php get_footer(); ?>

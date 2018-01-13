@@ -1,11 +1,14 @@
 //first content #cont_all_site
-
+// Descripción funciones less.
+// .flexdisplay(flex | inline-flex); 
+// .flexdir(row | row-reverse | column | column-reverse);
+// .shadow(ejeY 'px', ejeX 'x' , enfoque 'px', color);
 
 
 #cont_all_site{
 	.flexdisplay(flex);
 	.flexdir(row); 
-	width: @wd_total;
+	width: @wd_content_main;
 	overflow:hidden;
 	justify-content: space-around;
 	flex-wrap: nowrap;
@@ -13,6 +16,10 @@
 	align-items: stretch;
 	align-content: stretch;
 	//.fondoGradient();
+	.content_main{
+		width:100%;
+		
+	}
 
 	.block_publi_left, .block_publi_right{
 		border:1px solid black;
@@ -57,13 +64,19 @@ div h3.text_back {
 //ESTRUCTURA HEADER - OK
 header#block_header{ //contenido para el header
 	width:100%;
+	.flexdisplay(flex);
+	.flexdir(column);
+
 	.block_header_one{ //BLOCQUE SUPERIOR HEADER
+		.flexdisplay(inline-flex);
+
 		.sub_block_logo_site{ //BLOQUE LOGO DEL SITIO.
-			width: 20px;
+			
 			a{
 				img{
-					width:100px;
+					width:200px;
 					height: auto;
+					margin-top:10%;
 				}
 			}
 			h1{//TITULO DE LA WEB bloginfo('name')
@@ -72,7 +85,13 @@ header#block_header{ //contenido para el header
 			}
 		}
 		.sub_block_right{ //CONTENIDO REPRODUCTO, REDES Y BANNER
+			.flexdisplay();
+			.flexdir(column);
+			width:100%;
+			justify-content: flex-start;
 			.sub_block_right_up{
+				.flexdisplay(inline-flex);
+				justify-content: flex-end;
 				.block_music{
 
 				}
@@ -84,6 +103,9 @@ header#block_header{ //contenido para el header
 			}
 			.sub_block_right_down{ // CONTENIDO BANNER HEADER
 				border:1px solid black;
+				width: 100%;
+				height: 70px;
+				margin: 0 0 10px 0;
 
 
 			}
@@ -100,7 +122,15 @@ header#block_header{ //contenido para el header
 				li{
 
 					a{
-						color:purple;
+						color: white;
+						&:hover{
+							text-shadow: 8px -8px #ffd700;
+							font-size: 16px;
+							font-weight: 900;
+							transform: scaleY(1.4);
+							transition: 0.2s;
+
+						}
 					}
 				}
 
@@ -118,7 +148,8 @@ header#block_header{ //contenido para el header
 
 //menu redes sociales
 #menu_items_links, .nav_social_links {
-	padding-left:0;
+	padding:0;
+	margin:0;
 	li{
 		position: relative;
 		display: inline-block;
@@ -137,7 +168,7 @@ header#block_header{ //contenido para el header
 	//para vender el temas se tiene que dar soporte a todos los iconos 
 	//referencia a tomar es la pagina awesomei con font.
 	li a[href*="facebook.com"]:before{content: '\f082';}
-	li a[href*="youtube.com"]:before{content: '\f081';}
+	li a[href*="youtube.com"]:before{content: '\f167';}
 	li a[href*="twitter.com"]:before{content: '\f099';}
 	li a[href*="instagram.com"]:before{content: '\f16d';}
 	li a[href*="web.whatsapp.com"]:before{content: '\f232';}
@@ -178,3 +209,47 @@ footer{
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+===========================================================================================
+ESTILOS DIFERENTES VISTAS.
+===========================================================================================
+*/
+
+//POST EN UN AÑO.
+.cont_allpost_date{
+
+
+
+}
+
+
+// PAGES
+.cont_all_pages{
+
+}
+
+
+// CATEGORIAS
+.cont_all_categories{
+
+
+}
+
+
+
