@@ -9,7 +9,9 @@
 @basefont:Arial;
 @basecolor: black;
 @basefontcolor:white;
+@basefontsize:17px;
 @secondfont: Tangerine; 
+@secondcolor: white;
 
 //mixins 
 
@@ -64,50 +66,27 @@
 }
 
 
-.fondoGradient() {
-  text-align:center; 
-  background-color: #F4FA58; /*Navegadores que no aceptan el gradiente de fondo*/
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#F4FA58), to(#FF0000)); /* Chrome, Safari versiones más antiguas */
-  background-image: -webkit-linear-gradient(top, #F4FA58, #FF0000); /* Chrome, Safari versiones relativamente modernas */
-  background-image:    -moz-linear-gradient(top, #F4FA58, #FF0000); /* Firefox versiones relativamente modernas*/
-  background-image:      -o-linear-gradient(top, #F4FA58, #FF0000); /* Opera versiones relativamente modernas*/
-  background-image:         linear-gradient(to bottom, #F4FA58, #FF0000); /* Chrome, Firefox, IE, Opera versiones actuales */
-
-}
 
 
 
-
-
-
-
-
-
-
-// condiciones
+// CONDICIONES
 
 //para que funcione correctamente -
-//debe haber un funciones con el codigo, en este caso, 
-// "si" y otra para "no".
+// Debe hacer una funcion con con estado = si
+// y otra con estado no. 
+// y además una variable lo controle.
 
 @estado: si ;
 
 //Funcion en caso "si"
 .my-optional-style() when (@estado = si)  {
-  body {
-    background-color:black;
-    color: white;
-  }
-
+  
 
 }
 
 //funcion en caso "no"
 .my-optional-style() when (@estado = no)  {
-  button {
-    color: black;
-    background-color:white;
-  }
+  
 
 
 }

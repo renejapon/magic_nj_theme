@@ -3,7 +3,7 @@
 // .flexdisplay(flex | inline-flex); 
 // .flexdir(row | row-reverse | column | column-reverse);
 // .shadow(ejeY 'px', ejeX 'x' , enfoque 'px', color);
-
+// .fondoGradient(); @TODO - arreglar funcion
 
 #cont_all_site{
 	.flexdisplay(flex);
@@ -15,7 +15,6 @@
 	justify-content: space-around;
 	align-items: stretch;
 	align-content: stretch;
-	//.fondoGradient();
 	.content_main{
 		width:100%;
 		
@@ -36,7 +35,7 @@
 	}
 }
 
- 
+
  
 ul{list-style:none;}
 a{text-decoration: none;}
@@ -76,7 +75,7 @@ header#block_header{ //contenido para el header
 				img{
 					width:200px;
 					height: auto;
-					margin-top:10%;
+					margin-top:6%;
 				}
 			}
 			h1{//TITULO DE LA WEB bloginfo('name')
@@ -88,7 +87,7 @@ header#block_header{ //contenido para el header
 			.flexdisplay();
 			.flexdir(column);
 			width:100%;
-			justify-content: flex-start;
+			justify-content: center;
 			.sub_block_right_up{
 				.flexdisplay(inline-flex);
 				justify-content: flex-end;
@@ -96,16 +95,15 @@ header#block_header{ //contenido para el header
 
 				}
 				#block_social_links{
-					border:1px solid gold;
+					
 				}
-
-
 			}
 			.sub_block_right_down{ // CONTENIDO BANNER HEADER
 				border:1px solid black;
-				width: 100%;
-				height: 70px;
+				width: 800px;
+				height: 90px;
 				margin: 0 0 10px 0;
+				justify-content: flex-end;
 
 
 			}
@@ -132,14 +130,29 @@ header#block_header{ //contenido para el header
 
 						}
 					}
-				}
-
-
-				
+				}		
 			}
 		}
+	}
+}
 
 
+
+// ESTRUCTURA SLIDER PORTADA.
+.block_slider_portada{
+	.block_arti_big{
+
+	}
+	.block_arti_medium{
+
+	}
+	.block_article_double{
+		.double_sub_art_0{
+
+		}
+		.double_sub_art_01{
+			
+		}
 	}
 }
 
@@ -152,29 +165,46 @@ header#block_header{ //contenido para el header
 	margin:0;
 	li{
 		position: relative;
-		display: inline-block;
-	} 
-	li a:before{
-		display: inline-block;
-		vertical-align: top;
-		padding: 0 5px;
-		font-size:40px;
-		font-family:'fontAwesome';
-		color:black;
-		content: '\f08e';
-		border:2px solid gold;
+		display: inline-block; 
+	 	a{
+			&:before{
+			display: inline-block;
+			vertical-align: top;
+			padding: 0 5px;
+			font-size:40px;
+			font-family:'fontAwesome';
+			color:black;
+			content: '\f08e';
+			
+			}
+		}
 	}
 
-	//para vender el temas se tiene que dar soporte a todos los iconos 
-	//referencia a tomar es la pagina awesomei con font.
-	li a[href*="facebook.com"]:before{content: '\f082';}
-	li a[href*="youtube.com"]:before{content: '\f167';}
-	li a[href*="twitter.com"]:before{content: '\f099';}
-	li a[href*="instagram.com"]:before{content: '\f16d';}
-	li a[href*="web.whatsapp.com"]:before{content: '\f232';}
-
+	//PARA PODER VENDER EL TEMA SE TIENE QUE DAR SOPORTE A LA GRAN MAYORIA DE ICONS
+	// REFENCIA . FONT AWESOME.
+	li a[href*="facebook.com"]:before{
+		content: '\f082';
+		color:blue;
+	}
+	li a[href*="youtube.com"]:before{
+		content: '\f166';
+		color:red;
+	}
+	li a[href*="twitter.com"]:before{
+		content: '\f081';
+		color:skyblue;
+	}
+	li a[href*="instagram.com"]:before{
+		content: '\f16d';
+		color:black;
+	}
+	li a[href*="web.whatsapp.com"]:before{
+		content: '\f232';
+		
+	}
 }
 
+// ESTRUCTURA DE CLASE PARA 
 
  
  
@@ -207,22 +237,7 @@ footer{
 			color:gold;
 		}
 	}
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /**

@@ -18,10 +18,10 @@
  */
 ?>
 			<?php if(is_front_page() ): //mostrará los articulos solo en el front page?>
-			    <section class="row block_slider_portada col-lg-12">
+			    <section class=" block_slider_portada ">
 			      <?php $slider_p1= 5;  ?>
 			      <?php $mypost = new WP_Query('cat='.$slider_p1.'&posts_per_page=1'); while($mypost->have_posts() ): $mypost->the_post(); ?>
-			        <article class="block_arti_big col-lg-6">
+			        <article class="block_arti_big ">
 			          <a href="<?php the_permalink(); ?>"><img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" class="img-responsive image_post_id_<?php echo get_the_ID(); ?>" alt="<?php the_title_attribute(); ?>"></a>
 			          <div class="arraf">
 			            <h3><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
@@ -32,27 +32,27 @@
 			      <?php endwhile; wp_reset_postdata(); ?>
 			      <?php $slider_p2= 6;  ?>
 			      <?php $mypost = new WP_Query('cat='.$slider_p2.'&posts_per_page=1'); while($mypost->have_posts() ): $mypost->the_post(); ?>
-			        <article class="block_arti_medium col-lg-3">
+			        <article class="block_arti_medium ">
 			          <a href="<?php the_permalink(); ?>"><img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" class="img-responsive image_post_id_<?php echo get_the_ID(); ?>" alt="<?php the_title_attribute(); ?>"></a>
 			          <h3><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 			          <p><?php the_time(get_option('date_format')); ?></p>
 			        </article>
 			      <?php endwhile; wp_reset_postdata(); ?>
-			      <div class="block_article_double col-lg-3">
+			      <div class="block_article_double">
 			        <?php $slider_p2= 3;  ?>
-			      <?php $mypost = new WP_Query('cat='.$slider_p2.'&posts_per_page=2'); while($mypost->have_posts() ): $mypost->the_post(); ?>
-			        <article class="double_sub_art_0<?php echo $i; ?>">
-			          <a href="<?php the_permalink(); ?>"><img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" class="img-responsive image_post_id_<?php echo get_the_ID(); ?>" alt="<?php the_title_attribute(); ?>"></a>
-			          <h3><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-			          <p><?php the_time(get_option('date_format')); ?></p>
-			        </article>
-			        <?php $i++; ?>
-			      <?php endwhile; wp_reset_postdata(); ?>
+				      <?php $mypost = new WP_Query('cat='.$slider_p2.'&posts_per_page=2'); while($mypost->have_posts() ): $mypost->the_post(); ?>
+				        <article class="double_sub_art_0<?php echo $i; ?>">
+				          <a href="<?php the_permalink(); ?>"><img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" class="img-responsive image_post_id_<?php echo get_the_ID(); ?>" alt="<?php the_title_attribute(); ?>"></a>
+				          <h3><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+				          <p><?php the_time(get_option('date_format')); ?></p>
+				        </article>
+				        <?php $i++; ?>
+				      <?php endwhile; wp_reset_postdata(); ?>
 			      </div>
 			    </section>
 			<?php endif; ?>
-			<div class="container-fluid block_content_main_left">
-				<section class="row music_section">
+			<div class=" block_content_main_left">
+				<section class=" music_section">
 					<article class="descrip_category">
 						<div class="title_category">
 							<h3 class="text_front"><?php echo get_cat_name($cat_id_sec1); ?></h3>
@@ -68,7 +68,7 @@
 					</article>
 					<?php $a++; endwhile; wp_reset_postdata(); ?>
 				</section>
-				<section class="row concierto_section">
+				<section class=" concierto_section">
 					<article class="descrip_category ">
 						<div class="title_category">
 							<h3 class="text_front"><?php echo get_cat_name($cat_id_sec2); ?></h3>
@@ -88,7 +88,7 @@
 					</article>
 					<?php $j++; endwhile; wp_reset_postdata(); ?>			 
 				</section>
-				<section class="row music_section">
+				<section class=" music_section">
 					<article class="descrip_category">
 						<div class="title_category">
 							<h3 class="text_front"><?php echo get_cat_name($cat_id_sec3); ?></h3>
@@ -104,7 +104,7 @@
 					</article>
 					<?php $q++; endwhile; wp_reset_postdata(); ?>
 				</section>
-				<section class="row next_events_secction">
+				<section class=" next_events_secction">
 					<article class="descrip_category">
 						<div class="title_category">
 							<h3 class="text_front"><?php echo get_cat_name($cat_id_sec4); ?></h3>

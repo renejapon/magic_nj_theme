@@ -79,7 +79,7 @@ header#block_header .block_header_one {
 header#block_header .block_header_one .sub_block_logo_site a img {
   width: 200px;
   height: auto;
-  margin-top: 10%;
+  margin-top: 6%;
 }
 header#block_header .block_header_one .sub_block_right {
   -webkit-display: flex;
@@ -93,7 +93,7 @@ header#block_header .block_header_one .sub_block_right {
   -o-flex-direction: column;
   flex-direction: column;
   width: 100%;
-  justify-content: flex-start;
+  justify-content: center;
 }
 header#block_header .block_header_one .sub_block_right .sub_block_right_up {
   -webkit-display: inline-flex;
@@ -103,14 +103,12 @@ header#block_header .block_header_one .sub_block_right .sub_block_right_up {
   display: inline-flex;
   justify-content: flex-end;
 }
-header#block_header .block_header_one .sub_block_right .sub_block_right_up #block_social_links {
-  border: 1px solid gold;
-}
 header#block_header .block_header_one .sub_block_right .sub_block_right_down {
   border: 1px solid black;
-  width: 100%;
-  height: 70px;
+  width: 800px;
+  height: 90px;
   margin: 0 0 10px 0;
+  justify-content: flex-end;
 }
 header#block_header nav.block_nav_menu div.block_menu_main ul li a {
   color: white;
@@ -141,23 +139,26 @@ header#block_header nav.block_nav_menu div.block_menu_main ul li a:hover {
   font-family: 'fontAwesome';
   color: black;
   content: '\f08e';
-  border: 2px solid gold;
 }
 #menu_items_links li a[href*="facebook.com"]:before,
 .nav_social_links li a[href*="facebook.com"]:before {
   content: '\f082';
+  color: blue;
 }
 #menu_items_links li a[href*="youtube.com"]:before,
 .nav_social_links li a[href*="youtube.com"]:before {
-  content: '\f167';
+  content: '\f166';
+  color: red;
 }
 #menu_items_links li a[href*="twitter.com"]:before,
 .nav_social_links li a[href*="twitter.com"]:before {
-  content: '\f099';
+  content: '\f081';
+  color: skyblue;
 }
 #menu_items_links li a[href*="instagram.com"]:before,
 .nav_social_links li a[href*="instagram.com"]:before {
   content: '\f16d';
+  color: black;
 }
 #menu_items_links li a[href*="web.whatsapp.com"]:before,
 .nav_social_links li a[href*="web.whatsapp.com"]:before {

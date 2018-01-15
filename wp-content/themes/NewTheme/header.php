@@ -70,7 +70,7 @@
                   'theme_location'    => 'menu_principal', 
                   'container'         => '',
                   'container_id'      => '',
-                  'menu_class'        => 'nav navbar-nav navbar-reverse menu_list_header',
+                  'menu_class'        => 'nav navbar-nav menu_list_header',
 
               )); 
             }else{
