@@ -4,17 +4,26 @@
   <meta charset="<?php bloginfo( 'charset' ); ?> ">
   <title><?php wp_title(); ?> </title>
   <meta name="viewport" content="width=device-width, minimum-scale=1">
+  <link href='dominio.com' rel='canonical'/>
   <link rel="stylesheet" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
   <?php wp_head(); ?>
 </head>
 <body <?php  body_class(); ?> >
+
 <div id="cont_all_site">
   <section class="block_publi_left  text-center"><!--Inicio banner publi left-->
     <h3>BANNERS LEFT</h3>
   </section><!-- end block_publi_left-->
   <div class="content_main ">
     <header id="block_header">
+      <?php if ( get_header_image() ) : ?>
+        <div id="site-header">
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+              <img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+            </a>
+        </div>
+      <?php endif; ?>
       <div class="block_header_one">
         <div class="sub_block_logo_site ">
           <?php 
@@ -80,4 +89,4 @@
           </div>
       </nav>
     </header>
-    <section class="content_site "> <!--Inicio contenido principal-->
+    <section class="content_site " > <!--Inicio contenido principal-->

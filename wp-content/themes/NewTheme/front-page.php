@@ -51,7 +51,7 @@
 			      </div>
 			    </section>
 			<?php endif; ?>
-			<div class=" block_content_main_left">
+			<div class=" block_content_main_left" > <!-- Empieza contenido principal -->
 				<section class=" music_section">
 					<article class="descrip_category">
 						<div class="title_category">

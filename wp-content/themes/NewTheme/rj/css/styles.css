@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Bungee|Cookie|Sacramento|Tangerine');
+
+body{
+  color:white;
+}
 #cont_all_site {
   -webkit-display: flex;
   -moz-display: flex;

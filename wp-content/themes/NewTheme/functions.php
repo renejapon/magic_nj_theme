@@ -1,6 +1,36 @@
 <?php
 // habilitado para traducciones.
 load_theme_textdomain( 'magic_nj' );
+
+//background image.
+
+$args = array(
+    'default-color' => '000000',
+    'default-image' => '%1$s/images/background.jpg',
+);
+add_theme_support( 'custom-background', $args );
+
+
+
+//custom header 
+
+$defaults = array(
+    'default-image'          => '',
+    'flex-height'            => false,
+    'flex-width'             => false,
+    'width'                  => 800,
+    'height'                 => 90,
+    'uploads'                => true,
+    'random-default'         => false,
+    'header-text'            => false,
+    'default-text-color'     => 'fff',
+    'wp-head-callback'       => '',
+    'admin-head-callback'    => '',
+    'admin-preview-callback' => '',
+    'url_header_img'         => '',
+);
+add_theme_support( 'custom-header', $defaults );
+
 //hoja de estilos
 function themerj_styles(){
  	wp_enqueue_style('normalize', get_stylesheet_directory_uri().'/rj/css/normalize.css');
