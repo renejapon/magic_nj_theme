@@ -10,7 +10,7 @@
 ?>
 <aside id="sidebar" class="sidebar ">
 	<?php if ( is_active_sidebar( 'sidebar' ) ) : ?>
-		<div id="newposts_sidebar" class="primary-sidebar widget-area" role="complementary">
+		<div id="widgets_sidebar_mjg" class="primary-sidebar widget-area" role="complementary">
 			<?php dynamic_sidebar( 'sidebar' ); ?>
 		</div><!-- #primary-sidebar -->
 	<?php else: ?>

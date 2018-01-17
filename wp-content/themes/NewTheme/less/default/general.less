@@ -40,22 +40,27 @@
 ul{list-style:none;}
 a{text-decoration: none;}
 
+
 //ESTILOS PARA TITULO DOBLE.
-div h3.text_front{
-	color:purple;
-	font-weight: 900;
-}
-div h3.text_back {
-	margin-top:-50px;
-	z-index: -1;
-	font-size: 31px;
-	vertical-align: 10px; 
-	color: grey;
-	font-weight: 900;
-	letter-spacing: 10px;
-	top: -13px;
-	opacity: 0.6;
-	transform: scaleY(1.5);
+div.title_category{
+	border-bottom: 2px dotted gold;
+	
+	h3.text_front{
+		color:purple;
+		font-weight: 900;
+	}
+	h3.text_back {
+		margin-top:-50px;
+		z-index: -1;
+		font-size: 31px;
+		vertical-align: 10px; 
+		color: grey;
+		font-weight: 900;
+		letter-spacing: 10px;
+		top: -13px;
+		opacity: 0.6;
+		transform: scaleY(1.5);
+	}
 }
 
 
@@ -138,7 +143,7 @@ header#block_header{ //contenido para el header
 
 
 
-// ESTRUCTURA SLIDER PORTADA.
+// SLIDER PORTADA.
 .block_slider_portada{
 	.block_arti_big{
 
@@ -159,7 +164,7 @@ header#block_header{ //contenido para el header
 
 
 
-//menu redes sociales
+// MENU REDES SOCIALES
 #menu_items_links, .nav_social_links {
 	padding:0;
 	margin:0;
@@ -204,7 +209,45 @@ header#block_header{ //contenido para el header
 	}
 }
 
-// ESTRUCTURA DE CLASE PARA 
+// CONTENIDO PRINCIPAL. BLOQUE DERECHA Y SIDEBAR.
+
+.block_content_main_left{
+
+	.music_section{
+
+
+	}
+	.entrevistas_section{
+
+
+	}
+	.conciertos_section{
+
+
+	}
+	.next_events_section{
+
+
+	}
+}
+
+
+// SIDEBAR 
+
+aside{
+	#widgets_sidebar_mjg{
+		
+	}
+
+
+}
+
+
+
+
+
+
+
 
  
  
@@ -238,6 +281,17 @@ footer{
 		}
 	}
 }
+
+
+// CALENDARIO.
+//TABLE THEAD TFOOT TBODY(TR AND TD'S)
+
+.wp-calendar{
+	color:black;
+
+}
+
+
 
 
 /**

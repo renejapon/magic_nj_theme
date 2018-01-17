@@ -53,12 +53,10 @@
 			<?php endif; ?>
 			<div class=" block_content_main_left" > <!-- Empieza contenido principal -->
 				<section class=" music_section">
-					<article class="descrip_category">
-						<div class="title_category">
-							<h3 class="text_front"><?php echo get_cat_name($cat_id_sec1); ?></h3>
-							<h3 class="text_back"><?php echo get_cat_name($cat_id_sec1); ?></h3>
-						</div>
-					</article>
+					<div class="title_category">
+						<h3 class="text_front"><?php echo get_cat_name($cat_id_sec1); ?></h3>
+						<h3 class="text_back"><?php echo get_cat_name($cat_id_sec1); ?></h3>
+					</div>
 					<?php $mypost = new WP_Query('cat='.$cat_id_sec1.'&posts_per_page='.$sec1_posts); while($mypost->have_posts() ): $mypost->the_post(); ?>
 					<article class="sm_art_0<?php echo $a; ?>">
 						<a href="<?php the_permalink(); ?>"><img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" class="img-responsive image_post_id_<?php echo get_the_ID(); ?>" alt="<?php the_title_attribute(); ?>"></a>
@@ -68,13 +66,11 @@
 					</article>
 					<?php $a++; endwhile; wp_reset_postdata(); ?>
 				</section>
-				<section class=" concierto_section">
-					<article class="descrip_category ">
-						<div class="title_category">
-							<h3 class="text_front"><?php echo get_cat_name($cat_id_sec2); ?></h3>
-							<h3 class="text_back"><?php echo get_cat_name($cat_id_sec2); ?></h3>
-						</div>
-					</article>
+				<section class=" entrevistas_section">
+					<div class="title_category">
+						<h3 class="text_front"><?php echo get_cat_name($cat_id_sec2); ?></h3>
+						<h3 class="text_back"><?php echo get_cat_name($cat_id_sec2); ?></h3>
+					</div>
 					<?php $mypost = new WP_Query('cat='.$cat_id_sec2.'&posts_per_page='.$sec2_posts); while($mypost->have_posts() ): $mypost->the_post(); ?>
 					<article class="cm_art_0<?php echo $j; ?> ">
 						<a href="<?php the_permalink(); ?>"><img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" class="img-responsive image_post_id_<?php echo get_the_ID(); ?>" alt="<?php the_title_attribute(); ?>"></a>
@@ -88,13 +84,11 @@
 					</article>
 					<?php $j++; endwhile; wp_reset_postdata(); ?>			 
 				</section>
-				<section class=" music_section">
-					<article class="descrip_category">
-						<div class="title_category">
-							<h3 class="text_front"><?php echo get_cat_name($cat_id_sec3); ?></h3>
-							<h3 class="text_back"><?php echo get_cat_name($cat_id_sec3); ?></h3>
-						</div>
-					</article>
+				<section class=" conciertos_section">
+					<div class="title_category">
+						<h3 class="text_front"><?php echo get_cat_name($cat_id_sec3); ?></h3>
+						<h3 class="text_back"><?php echo get_cat_name($cat_id_sec3); ?></h3>
+					</div>
 					<?php $mypost = new WP_Query('cat='.$cat_id_sec3.'&posts_per_page='.$sec3_posts); while($mypost->have_posts() ): $mypost->the_post(); ?>
 					<article class="sm_art_0<?php echo $q; ?>	">
 						<a href="<?php the_permalink(); ?>"><img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" class="img-responsive image_post_id_<?php echo get_the_ID(); ?>" alt="<?php the_title_attribute(); ?>"></a>
@@ -104,13 +98,11 @@
 					</article>
 					<?php $q++; endwhile; wp_reset_postdata(); ?>
 				</section>
-				<section class=" next_events_secction">
-					<article class="descrip_category">
-						<div class="title_category">
-							<h3 class="text_front"><?php echo get_cat_name($cat_id_sec4); ?></h3>
-							<h3 class="text_back"><?php echo get_cat_name($cat_id_sec4); ?></h3>
-						</div>
-					</article>
+				<section class=" next_events_section">
+					<div class="title_category">
+						<h3 class="text_front"><?php echo get_cat_name($cat_id_sec4); ?></h3>
+						<h3 class="text_back"><?php echo get_cat_name($cat_id_sec4); ?></h3>
+					</div>
 					<?php $mypost = new WP_Query('cat='.$cat_id_sec4.'&posts_per_page='.$sec4_posts); while($mypost->have_posts() ): $mypost->the_post(); ?>
 					<article class="nxevs_art_0<?php echo $nxevs; ?> ">
 						<a href="<?php the_permalink(); ?>"><img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" class="img-responsive image_post_id_<?php echo get_the_ID(); ?>" alt="<?php the_title_attribute(); ?>"></a>
@@ -121,7 +113,6 @@
 						</div>
 					</article>
 					<?php $nxevs++; endwhile; wp_reset_postdata(); ?>
-
 				</section>
 			</div>
 <?php get_footer(); ?>
